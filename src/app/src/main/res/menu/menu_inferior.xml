@@ -3,7 +3,9 @@
     <item
         android:id="@+id/icono_mapa"
         android:icon="@drawable/map_icon"
-        android:title="Mapa"/>
+        android:title="Mapa"
+        android:color="@color/black" android:state_checked="true"
+        />
 
     <item
         android:id="@+id/icono_recorridos"
