@@ -23,7 +23,16 @@ class ListaLeyendasFragment : Fragment() {
         recycler.adapter = adapter
 
         val leyendaList = mutableListOf(
-            Leyenda(1, "Leyenda del Patio de los Leones", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1")
+            Leyenda(1, "Leyenda del Patio de los Leones", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),
+            Leyenda(1, "Leyenda del Patio de los Leones2", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),
+            Leyenda(1, "Leyenda del Patio de los Leones3", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),
+            Leyenda(1, "Leyenda del Patio de los Leones4", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),
+            Leyenda(1, "Leyenda del Patio de los Leones5", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),
+            Leyenda(1, "Leyenda del Patio de los Leones6", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),
+            Leyenda(1, "Leyenda del Patio de los Leones7", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),
+            Leyenda(1, "Leyenda del Patio de los Leones8", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),
+            Leyenda(1, "Leyenda del Patio de los Leones9", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1")
+
         )
 
         adapter.submitList(leyendaList)
