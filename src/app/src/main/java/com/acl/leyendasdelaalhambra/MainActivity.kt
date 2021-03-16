@@ -16,12 +16,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val bottomNavigationMenu = findViewById<BottomNavigationView>(R.id.menu_inferior)
-        val navController = findNavController(R.id.fragment2)
-        bottomNavigationMenu.setupWithNavController(navController)
+        //Para hacer que el menu inferior se asocie a cada fragment
+        // para ello es necesario que en el controlador de navegacion
+        // y el propio fragment tengan el mismo ID
+        val menu_inferior = findViewById<BottomNavigationView>(R.id.menu_inferior)
+        val controlador_navegacion = findNavController(R.id.fragment2)
+        menu_inferior.setupWithNavController(controlador_navegacion)
     }
 
-   
+
 
     fun onLeyendaSelected(it: Leyenda) {
         findNavController(R.id.fragment2).navigate(ListaLeyendasFragmentDirections.actionListaLeyendasFragmentToLeyendaDetallesFragment())
