@@ -11,6 +11,7 @@
         android:id="@+id/leyenda_imagen"
         android:layout_width="110dp"
         android:layout_height="110dp"
+        android:scaleType="centerCrop"
         android:adjustViewBounds="true"
         tools:ignore="MissingConstraints" />
 
