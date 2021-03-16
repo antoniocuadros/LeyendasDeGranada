@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion_leyendas"
+    app:startDestination="@id/listaLeyendasFragment">
+
+    <fragment
+        android:id="@+id/listaLeyendasFragment"
+        android:name="com.acl.leyendasdelaalhambra.ListaLeyendasFragment"
+        android:label="fragment_lista_leyendas"
+        tools:layout="@layout/fragment_lista_leyendas" >
+        <action
+            android:id="@+id/action_listaLeyendasFragment_to_leyendaDetallesFragment"
+            app:destination="@id/leyendaDetallesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leyendaDetallesFragment"
+        android:name="com.acl.leyendasdelaalhambra.LeyendaDetallesFragment"
+        android:label="fragment_leyenda_detalles"
+        tools:layout="@layout/fragment_leyenda_detalles" />
+</navigation>
