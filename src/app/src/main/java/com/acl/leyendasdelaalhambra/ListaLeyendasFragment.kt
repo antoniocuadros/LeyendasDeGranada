@@ -1,5 +1,6 @@
 package com.acl.leyendasdelaalhambra
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,8 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ListaLeyendasFragment : Fragment() {
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,6 +24,7 @@ class ListaLeyendasFragment : Fragment() {
 
         adapter.onItemClickListener = {
             Toast.makeText(requireActivity(), it.nombre, Toast.LENGTH_LONG).show()
+            (activity as MainActivity).onLeyendaSelected(it)
         }
 
         val leyendaList = mutableListOf(

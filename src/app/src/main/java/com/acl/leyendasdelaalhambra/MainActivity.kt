@@ -3,6 +3,10 @@ package com.acl.leyendasdelaalhambra
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.ListFragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -11,29 +15,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val mapaFragment = MapaFragment()
-        val recorridosFragment = RecorridosFragment()
-        val listaLeyendasFragment = ListaLeyendasFragment()
 
-        cambiaFragment(mapaFragment, false)
-
-        menu_inferior.setOnNavigationItemSelectedListener{
-            when(it.itemId){
-                R.id.icono_mapa -> cambiaFragment(mapaFragment, true)
-                R.id.icono_recorridos -> cambiaFragment(recorridosFragment, true)
-                R.id.icono_lista_leyendas -> cambiaFragment(listaLeyendasFragment, true)
-            }
-            true
-        }
+        val bottomNavigationMenu = findViewById<BottomNavigationView>(R.id.menu_inferior)
+        val navController = findNavController(R.id.fragment2)
+        bottomNavigationMenu.setupWithNavController(navController)
     }
 
-    fun cambiaFragment(fragmento: Fragment, vuelta_atras:Boolean){
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.cambia_fragmento, fragmento)
-            commit()
-            if(vuelta_atras){
-                addToBackStack(null)
-            }
-        }
+   
+
+    fun onLeyendaSelected(it: Leyenda) {
+        findNavController(R.id.fragment2).navigate(ListaLeyendasFragmentDirections.actionListaLeyendasFragmentToLeyendaDetallesFragment())
     }
 }

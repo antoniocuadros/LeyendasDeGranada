@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navegacion_leyendas"
-    app:startDestination="@id/listaLeyendasFragment">
+    app:startDestination="@id/icono_mapa">
 
     <fragment
-        android:id="@+id/listaLeyendasFragment"
+        android:id="@+id/icono_lista_leyendas"
         android:name="com.acl.leyendasdelaalhambra.ListaLeyendasFragment"
         android:label="fragment_lista_leyendas"
         tools:layout="@layout/fragment_lista_leyendas" >
@@ -19,4 +19,14 @@
         android:name="com.acl.leyendasdelaalhambra.LeyendaDetallesFragment"
         android:label="fragment_leyenda_detalles"
         tools:layout="@layout/fragment_leyenda_detalles" />
+    <fragment
+        android:id="@+id/icono_mapa"
+        android:name="com.acl.leyendasdelaalhambra.MapaFragment"
+        android:label="fragment_mapa"
+        tools:layout="@layout/fragment_mapa" />
+    <fragment
+        android:id="@+id/icono_recorridos"
+        android:name="com.acl.leyendasdelaalhambra.RecorridosFragment"
+        android:label="fragment_recorridos"
+        tools:layout="@layout/fragment_recorridos" />
 </navigation>
