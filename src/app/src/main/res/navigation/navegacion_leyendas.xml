@@ -18,7 +18,12 @@
         android:id="@+id/leyendaDetallesFragment"
         android:name="com.acl.leyendasdelaalhambra.LeyendaDetallesFragment"
         android:label="fragment_leyenda_detalles"
-        tools:layout="@layout/fragment_leyenda_detalles" />
+        tools:layout="@layout/fragment_leyenda_detalles" >
+        <argument
+            android:name="leyenda"
+            app:argType="com.acl.leyendasdelaalhambra.Leyenda"
+            />
+    </fragment>
     <fragment
         android:id="@+id/icono_mapa"
         android:name="com.acl.leyendasdelaalhambra.MapaFragment"

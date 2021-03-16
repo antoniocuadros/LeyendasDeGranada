@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    fun onLeyendaSelected(it: Leyenda) {
-        findNavController(R.id.fragment2).navigate(ListaLeyendasFragmentDirections.actionListaLeyendasFragmentToLeyendaDetallesFragment())
+    fun onLeyendaSelected(leyenda: Leyenda) {
+        findNavController(R.id.fragment2).navigate(ListaLeyendasFragmentDirections.actionListaLeyendasFragmentToLeyendaDetallesFragment(leyenda))
     }
 }
