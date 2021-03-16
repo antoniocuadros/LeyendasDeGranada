@@ -24,6 +24,7 @@
         tools:text="Nombre_Leyenda" />
 
     <TextView
+        android:id="@+id/leyenda_recorrido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
