@@ -22,12 +22,10 @@ class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallbac
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         private val nombre_leyenda = view.findViewById<TextView>(R.id.leyenda_nombre)
-        private val recorrido_leyenda = view.findViewById<TextView>(R.id.leyenda_recorrido)
         //Falta el tema de la imagen
 
         fun bind(leyenda:Leyenda){
             nombre_leyenda.text = leyenda.nombre
-            recorrido_leyenda.text = leyenda.recorrido
         }
 
     }

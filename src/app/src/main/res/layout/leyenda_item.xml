@@ -21,16 +21,7 @@
         app:layout_constraintStart_toEndOf="@+id/leyenda_imagen"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="12dp"
-        tools:text="Nombre_Leyenda" />
-
-    <TextView
-        android:id="@+id/leyenda_recorrido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/leyenda_nombre"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Num Recorrido" />
+        tools:text="Nombre_Leyenda"
+        android:textSize="16sp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
