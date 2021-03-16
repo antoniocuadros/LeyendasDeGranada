@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -21,6 +22,10 @@ class ListaLeyendasFragment : Fragment() {
         recycler.layoutManager = LinearLayoutManager(requireActivity())
         val adapter = LeyendaAdapter()
         recycler.adapter = adapter
+
+        adapter.onItemClickListener = {
+            Toast.makeText(requireActivity(), it.nombre, Toast.LENGTH_LONG).show()
+        }
 
         val leyendaList = mutableListOf(
             Leyenda(1, "Leyenda del Patio de los Leones", "Descripción de prueba", "url_imagen_prueba", 1.1231, 2.21313, "Recorrido 1"),

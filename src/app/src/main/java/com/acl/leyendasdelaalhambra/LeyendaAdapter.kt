@@ -3,6 +3,7 @@ package com.acl.leyendasdelaalhambra
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
@@ -20,8 +21,12 @@ class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallbac
         }
     }
 
+    //Listener para cuando pulsemos una casilla
+    lateinit var onItemClickListener: (Leyenda) -> Unit
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+
+
+    inner class ViewHolder(val view: View): RecyclerView.ViewHolder(view) {
         private val nombre_leyenda = view.findViewById<TextView>(R.id.leyenda_nombre)
         private val imagen_leyenda = view.findViewById<ImageView>(R.id.leyenda_imagen)
         //Falta el tema de la imagen
@@ -29,6 +34,12 @@ class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallbac
         fun bind(leyenda:Leyenda){
             nombre_leyenda.text = leyenda.nombre
             imagen_leyenda.setImageResource(R.drawable.imagen_prueba)
+
+            view.setOnClickListener{
+                if(::onItemClickListener.isInitialized){
+                    onItemClickListener(leyenda)
+                }
+            }
         }
 
     }
