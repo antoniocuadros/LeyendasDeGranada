@@ -4,13 +4,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LeyendaDetallesFragment"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_margin="12dp"
     >
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/imagen_prueba"/>
+        android:src="@drawable/imagen_prueba"
 
+        />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        tools:text="Patio de los Leones"
+        android:layout_marginTop="20dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        tools:text="Hace muchos años una Princesa llamada Zaira, viajó hasta Granada con su padre. Se alojaron en las dependencias de La Alhambra. Zaira se sentía muy sola ya que solo contaba con la compañía de su padre y un séquito de 11 hombre que velaban por su seguridad. Un día, la Princesa leyó el diario de su padre donde contaba que había matado a los verdaderos padres de Zaira cuando ella tenía 1 año.Al parecer, su madre había echado un maleficio al talismán y si la niña algún día se enteraba de la verdad, una maldición caería sobre el Rey. En el patio donde ahora se encuentra el Patio de Los Leones, la joven le preguntó a su padre si lo que había leído era cierto, su padre lo afirmó y cuenta la leyenda que el talismán se activó y su padre con los 11 hombres se convirtieron en 12 leones de piedra, los que coronan hoy en día el Patio de los Leones."
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/black"
+        android:text="Localización"
+        android:layout_gravity="center_vertical|center_horizontal"
+
+    />
 </LinearLayout>
