@@ -35,7 +35,7 @@ class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallbac
             nombre_leyenda.text = leyenda.nombre
 
             imagen_leyenda.setImageResource(R.drawable.leones)
-
+            
             view.setOnClickListener{
                 if(::onItemClickListener.isInitialized){
                     onItemClickListener(leyenda)
