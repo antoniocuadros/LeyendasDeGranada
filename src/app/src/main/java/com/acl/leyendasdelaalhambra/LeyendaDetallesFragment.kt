@@ -25,7 +25,7 @@ class LeyendaDetallesFragment : Fragment() {
 
         nombreText.text = leyenda.nombre
         descripcionText.text = leyenda.descripcion
-        
+
         return view
     }
 }

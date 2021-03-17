@@ -33,7 +33,8 @@ class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallbac
 
         fun bind(leyenda:Leyenda){
             nombre_leyenda.text = leyenda.nombre
-            imagen_leyenda.setImageResource(R.drawable.imagen_prueba)
+
+            imagen_leyenda.setImageResource(R.drawable.leones)
 
             view.setOnClickListener{
                 if(::onItemClickListener.isInitialized){
