@@ -23,7 +23,6 @@ class ListaLeyendasFragment : Fragment() {
         recycler.adapter = adapter
 
         adapter.onItemClickListener = {
-            Toast.makeText(requireActivity(), it.nombre, Toast.LENGTH_LONG).show()
             (activity as MainActivity).onLeyendaSelected(it)
         }
 
