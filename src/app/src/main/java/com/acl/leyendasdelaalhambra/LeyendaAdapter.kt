@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallback) {
     companion object DiffCallback:DiffUtil.ItemCallback<Leyenda>(){
@@ -35,7 +36,8 @@ class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallbac
             nombre_leyenda.text = leyenda.nombre
 
             imagen_leyenda.setImageResource(R.drawable.leones)
-            
+            Glide.with(view).load(leyenda.imagen).into(imagen_leyenda);
+
             view.setOnClickListener{
                 if(::onItemClickListener.isInitialized){
                     onItemClickListener(leyenda)
