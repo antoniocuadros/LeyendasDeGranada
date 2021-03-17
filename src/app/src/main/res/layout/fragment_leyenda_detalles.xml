@@ -21,11 +21,11 @@
     >
 
     <ImageView
+        android:id="@+id/imagen_leyenda_detalles"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
         android:src="@drawable/imagen_prueba"
-
         />
 
     <TextView
