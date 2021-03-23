@@ -8,5 +8,5 @@ import kotlinx.android.parcel.Parcelize
 @Entity(tableName = "leyendas")
 @Parcelize
 data class Leyenda(@PrimaryKey val id: Long, val nombre: String, val descripcion: String,
-                   val imagen: String, val Long: Double, val Lat: Double,
+                   val imagen: String, val Lat: Double, val Long: Double,
                    val recorrido: String) : Parcelable

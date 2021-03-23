@@ -44,17 +44,28 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
     override fun onMapReady(_mapa: GoogleMap) {
         mapa = _mapa;
         centra_en_alhambra();
+
+        val accesoDatos = AccesoDatos()
+        val leyendas = accesoDatos.obtenerLeyendas()
+        anadirMarcadoresLeyendas(leyendas)
     }
 
     private fun centra_en_alhambra(){
         val alhambra= LatLng(37.1760783, -3.5881413)
         mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(alhambra, 16F))
-        anadeMarcador(alhambra)
+
     }
 
-    private fun anadeMarcador(coord:LatLng){
+    private fun anadeMarcador(coord:LatLng, nombre:String){
         val coordenadas = coord;
-        val marcador = MarkerOptions().position(coordenadas).title("Alhambra");
+        val marcador = MarkerOptions().position(coordenadas).title(nombre);
         mapa.addMarker(marcador)
+    }
+
+    private fun anadirMarcadoresLeyendas(leyendas:MutableList<Leyenda>){
+        for(leyenda in leyendas){
+            val coordenada = LatLng(leyenda.Lat,leyenda.Long);
+            anadeMarcador(coordenada, leyenda.nombre)
+        }
     }
 }
