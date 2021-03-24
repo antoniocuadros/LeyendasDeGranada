@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import de.hdodenhof.circleimageview.CircleImageView
 
 class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallback) {
     companion object DiffCallback:DiffUtil.ItemCallback<Leyenda>(){
@@ -29,7 +30,7 @@ class LeyendaAdapter:ListAdapter<Leyenda, LeyendaAdapter.ViewHolder>(DiffCallbac
 
     inner class ViewHolder(val view: View): RecyclerView.ViewHolder(view) {
         private val nombre_leyenda = view.findViewById<TextView>(R.id.leyenda_nombre)
-        private val imagen_leyenda = view.findViewById<ImageView>(R.id.leyenda_imagen)
+        private val imagen_leyenda = view.findViewById<CircleImageView>(R.id.leyenda_imagen)
         //Falta el tema de la imagen
 
         fun bind(leyenda:Leyenda){
