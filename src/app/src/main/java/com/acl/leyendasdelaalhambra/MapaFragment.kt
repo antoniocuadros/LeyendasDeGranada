@@ -75,7 +75,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         if(argumentos_detalles.leyenda == null){ //no venimos de los detalles
             anadirMarcadoresLeyendas(leyendas)
         }
-        else{
+        else{ //venimos de la pestaña detalles
             anadeMarcador(argumentos_detalles.leyenda!!)
             centraMapa(LatLng(argumentos_detalles.leyenda!!.Lat, argumentos_detalles.leyenda!!.Long))
         }
