@@ -39,7 +39,6 @@ class LeyendaDetallesFragment : Fragment() {
         //Botón de la ubicación
         boton.setOnClickListener {
             (activity as MainActivity).onBotonLocalizacionSelected(leyenda)
-            Toast.makeText(context,leyenda.nombre,Toast.LENGTH_SHORT).show()
         }
 
         return view

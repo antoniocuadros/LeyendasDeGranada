@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mapa_fragmento"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MapaFragment"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    />
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/mapa_fragmento"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapaFragment"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mapa_fragmento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ojo"
+        app:tint="@color/BackgroudGreen"
+        android:backgroundTint="@color/IconGreen"
+        app:maxImageSize="40dp"
+        android:id="@+id/boton_flotante_todas"
+        android:visibility="invisible"
+        >
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

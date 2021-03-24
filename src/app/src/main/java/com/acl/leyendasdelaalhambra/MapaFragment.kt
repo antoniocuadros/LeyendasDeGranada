@@ -29,13 +29,13 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_mapa.*
 
 class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
     private lateinit var mapa: GoogleMap;
-
     private val argumentos_detalles:MapaFragmentArgs by navArgs()
-
+    private lateinit var boton_todas:FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +51,8 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         //inicializamos el fragmento
         inicializaFragmento();
 
+        boton_todas = vista.findViewById<FloatingActionButton>(R.id.boton_flotante_todas)
+
         return vista;
     }
 
@@ -65,6 +67,8 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     override fun onMapReady(_mapa: GoogleMap) {
         val alhambra= LatLng(37.1760783, -3.5881413)
 
+
+
         mapa = _mapa;
         activarUbicacionTiempoReal()
         centraMapa(alhambra);
@@ -72,12 +76,19 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         val accesoDatos = AccesoDatos()
         val leyendas = accesoDatos.obtenerLeyendas()
 
+        //Listener del floating button
+        boton_todas.setOnClickListener{
+            anadirMarcadoresLeyendas(leyendas)
+            boton_todas.hide()
+        }
+
         if(argumentos_detalles.leyenda == null){ //no venimos de los detalles
             anadirMarcadoresLeyendas(leyendas)
         }
         else{ //venimos de la pestaña detalles
             anadeMarcador(argumentos_detalles.leyenda!!)
             centraMapa(LatLng(argumentos_detalles.leyenda!!.Lat, argumentos_detalles.leyenda!!.Long))
+            boton_todas.show()
         }
 
 
