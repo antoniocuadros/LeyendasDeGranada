@@ -69,16 +69,17 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
 
     }
 
-    private fun anadeMarcador(coord:LatLng, nombre:String){
-        val coordenadas = coord;
-        val marcador = MarkerOptions().position(coordenadas).title(nombre);
-        mapa.addMarker(marcador)
+    private fun anadeMarcador(leyenda:Leyenda){
+        val coordenadas = LatLng(leyenda.Lat,leyenda.Long);
+
+
+        val marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre))
+        marcador.tag = leyenda
     }
 
     private fun anadirMarcadoresLeyendas(leyendas:MutableList<Leyenda>){
         for(leyenda in leyendas){
-            val coordenada = LatLng(leyenda.Lat,leyenda.Long);
-            anadeMarcador(coordenada, leyenda.nombre)
+            anadeMarcador(leyenda)
         }
     }
 
