@@ -28,7 +28,11 @@
         android:id="@+id/icono_mapa"
         android:name="com.acl.leyendasdelaalhambra.MapaFragment"
         android:label="fragment_mapa"
-        tools:layout="@layout/fragment_mapa" />
+        tools:layout="@layout/fragment_mapa" >
+        <action
+            android:id="@+id/action_icono_mapa_to_leyendaDetallesFragment"
+            app:destination="@id/leyendaDetallesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/icono_recorridos"
         android:name="com.acl.leyendasdelaalhambra.RecorridosFragment"

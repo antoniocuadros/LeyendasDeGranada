@@ -16,6 +16,9 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.checkSelfPermission
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -138,11 +141,8 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         }
     }
 
-    override fun onInfoWindowClick(p0: Marker?) {
-        Toast.makeText(
-                context, "Info window clicked",
-                Toast.LENGTH_SHORT
-        ).show()
-
+    override fun onInfoWindowClick(marcador: Marker?) {
+        var leyenda = marcador?.tag as Leyenda
+        (activity as MainActivity).onMarcadorSelected(leyenda)
     }
 }

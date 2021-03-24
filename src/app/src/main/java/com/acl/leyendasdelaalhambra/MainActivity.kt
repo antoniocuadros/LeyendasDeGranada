@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_mapa.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,5 +29,9 @@ class MainActivity : AppCompatActivity() {
 
     fun onLeyendaSelected(leyenda: Leyenda) {
         findNavController(R.id.fragment2).navigate(ListaLeyendasFragmentDirections.actionListaLeyendasFragmentToLeyendaDetallesFragment(leyenda))
+    }
+
+    fun onMarcadorSelected(leyenda: Leyenda) {
+        findNavController(R.id.fragment2).navigate(MapaFragmentDirections.actionIconoMapaToLeyendaDetallesFragment(leyenda))
     }
 }
