@@ -24,7 +24,7 @@ class AccesoDatos {
                         "Recorrido 1",
                         "Puerta de la Justicia"
                 ),
-                Leyenda(3, "Leyenda de la sala  Abencerrajes",
+                Leyenda(3, "Leyenda de la sala  de los Abencerrajes",
                         "El nombre de Abencerrajes proviene del apellido de una familia de la nobleza de la época, que tenían sus viviendas en el interior de la Alhambra.\n"
                                 +"\n"+
                                 "Cuenta la leyenda que esta familia tenía como rival político a otra llamada Zenetes, los cuales decidieron acabar con sus oponentes mediante una conspiración... Así, inventaron una relación amorosa entre la sultana y uno de los Abencerrajes, para conseguir despertar los celos y la ira en el sultán... El sultán, cegado por la consternación, y en ocasión de una fiesta en la sala que lleva el nombre de la familia, hizo decapitar sobre su fuente a los 37 caballeros que llevaban el nombre de Abencerrajes.\n"
