@@ -21,6 +21,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.fragment_mapa.*
@@ -73,7 +74,7 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
         val coordenadas = LatLng(leyenda.Lat,leyenda.Long);
 
 
-        val marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre))
+        val marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)))
         marcador.tag = leyenda
     }
 
