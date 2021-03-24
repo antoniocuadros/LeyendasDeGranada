@@ -80,7 +80,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         val coordenadas = LatLng(leyenda.Lat,leyenda.Long);
 
 
-        val marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)))
+        val marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)).snippet(leyenda.recorrido))
         marcador.tag = leyenda
     }
 
