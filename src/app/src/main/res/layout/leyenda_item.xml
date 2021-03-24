@@ -27,11 +27,11 @@
 
         <TextView
             android:id="@+id/leyenda_nombre"
-            android:layout_width="214dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="12dp"
+            android:layout_marginRight="20dp"
             android:gravity="center"
-            android:textColor="@color/BackgroudGreen"
+            android:textColor="@color/Texto"
             android:textSize="16sp"
             tools:text="Leyenda del patio de los leones" />
     </LinearLayout>
