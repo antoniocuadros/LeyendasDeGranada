@@ -23,10 +23,11 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.fragment_mapa.*
 
-class MapaFragment : Fragment(), OnMapReadyCallback {
+class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
     private lateinit var mapa: GoogleMap;
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,6 +63,8 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
         val accesoDatos = AccesoDatos()
         val leyendas = accesoDatos.obtenerLeyendas()
         anadirMarcadoresLeyendas(leyendas)
+
+        mapa.setOnInfoWindowClickListener(this)
     }
 
     private fun centra_en_alhambra(){
@@ -133,5 +136,13 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                 Toast.makeText(context, "Es necesario otorgar permisos de localización", Toast.LENGTH_LONG).show()
             }
         }
+    }
+
+    override fun onInfoWindowClick(p0: Marker?) {
+        Toast.makeText(
+                context, "Info window clicked",
+                Toast.LENGTH_SHORT
+        ).show()
+
     }
 }
