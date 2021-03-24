@@ -23,6 +23,9 @@
             android:name="leyenda"
             app:argType="com.acl.leyendasdelaalhambra.Leyenda"
             />
+        <action
+            android:id="@+id/action_leyendaDetallesFragment_to_icono_mapa"
+            app:destination="@id/icono_mapa" />
     </fragment>
     <fragment
         android:id="@+id/icono_mapa"
@@ -32,6 +35,12 @@
         <action
             android:id="@+id/action_icono_mapa_to_leyendaDetallesFragment"
             app:destination="@id/leyendaDetallesFragment" />
+        <argument
+            android:name="leyenda"
+            app:argType="com.acl.leyendasdelaalhambra.Leyenda"
+            app:nullable="true"
+            android:defaultValue="@null"
+            />
     </fragment>
     <fragment
         android:id="@+id/icono_recorridos"

@@ -19,6 +19,7 @@ import androidx.core.content.ContextCompat.checkSelfPermission
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -32,6 +33,9 @@ import kotlinx.android.synthetic.main.fragment_mapa.*
 
 class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
     private lateinit var mapa: GoogleMap;
+
+    private val argumentos_detalles:MapaFragmentArgs by navArgs()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,7 +69,15 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
         val accesoDatos = AccesoDatos()
         val leyendas = accesoDatos.obtenerLeyendas()
-        anadirMarcadoresLeyendas(leyendas)
+
+        if(argumentos_detalles.leyenda == null){ //no venimos de los detalles
+            anadirMarcadoresLeyendas(leyendas)
+        }
+        else{
+            anadeMarcador(argumentos_detalles.leyenda!!)
+        }
+
+
 
         mapa.setOnInfoWindowClickListener(this)
     }

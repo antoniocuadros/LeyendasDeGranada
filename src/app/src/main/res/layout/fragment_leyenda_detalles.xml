@@ -64,6 +64,7 @@
         android:textColor="@color/IconGreen"
         android:text="Localización"
         android:layout_gravity="center_vertical|center_horizontal"
+        android:id="@+id/boton_localizacion"
 
     />
 </LinearLayout>

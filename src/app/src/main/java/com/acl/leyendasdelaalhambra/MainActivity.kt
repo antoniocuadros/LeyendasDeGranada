@@ -27,11 +27,18 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    //De lista leyendas a detalles
     fun onLeyendaSelected(leyenda: Leyenda) {
         findNavController(R.id.fragment2).navigate(ListaLeyendasFragmentDirections.actionListaLeyendasFragmentToLeyendaDetallesFragment(leyenda))
     }
 
+    //De mapa a detalles
     fun onMarcadorSelected(leyenda: Leyenda) {
         findNavController(R.id.fragment2).navigate(MapaFragmentDirections.actionIconoMapaToLeyendaDetallesFragment(leyenda))
+    }
+
+    //De detalles a mapa
+    fun onBotonLocalizacionSelected(leyenda: Leyenda) {
+        findNavController(R.id.fragment2).navigate(LeyendaDetallesFragmentDirections.actionLeyendaDetallesFragmentToIconoMapa(leyenda))
     }
 }
