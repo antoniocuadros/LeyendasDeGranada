@@ -63,9 +63,11 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
     //se llama cuando se cargue el mapa
     override fun onMapReady(_mapa: GoogleMap) {
+        val alhambra= LatLng(37.1760783, -3.5881413)
+
         mapa = _mapa;
         activarUbicacionTiempoReal()
-        centra_en_alhambra();
+        centraMapa(alhambra);
 
         val accesoDatos = AccesoDatos()
         val leyendas = accesoDatos.obtenerLeyendas()
@@ -75,6 +77,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         }
         else{
             anadeMarcador(argumentos_detalles.leyenda!!)
+            centraMapa(LatLng(argumentos_detalles.leyenda!!.Lat, argumentos_detalles.leyenda!!.Long))
         }
 
 
@@ -82,9 +85,9 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         mapa.setOnInfoWindowClickListener(this)
     }
 
-    private fun centra_en_alhambra(){
-        val alhambra= LatLng(37.1760783, -3.5881413)
-        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(alhambra, 16F))
+    private fun centraMapa(coords:LatLng){
+
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(coords, 16F))
 
     }
 
