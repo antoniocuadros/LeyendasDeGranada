@@ -67,14 +67,13 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     override fun onMapReady(_mapa: GoogleMap) {
         val alhambra= LatLng(37.1760783, -3.5881413)
 
-
-
         mapa = _mapa;
         activarUbicacionTiempoReal()
-        centraMapa(alhambra);
+        centraMapa(alhambra, 16F);
 
         val accesoDatos = AccesoDatos()
         val leyendas = accesoDatos.obtenerLeyendas()
+
 
         //Listener del floating button
         boton_todas.setOnClickListener{
@@ -83,17 +82,22 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         }
 
         if(argumentos_detalles.leyenda == null){
-
             if(argumentos_detalles.recorrido != null){ //venimos de recorridos
-                Toast.makeText(context,"hola recorrido", Toast.LENGTH_SHORT).show()
-            }//venimos de la pestaña detalles
+                val recorrido:Recorrido = argumentos_detalles.recorrido!!
+                //Mostramos los marcadores de las leyendas asociadas al recorrido
+                anadirMarcadoresLeyendas(recorrido.leyendas)
+
+                boton_todas.show()
+
+            }
             else{//no venimos de los detalles
                 anadirMarcadoresLeyendas(leyendas)
             }
         }
-        else{
+        else{//venimos de la pestaña detalles
             anadeMarcador(argumentos_detalles.leyenda!!)
-            centraMapa(LatLng(argumentos_detalles.leyenda!!.Lat, argumentos_detalles.leyenda!!.Long))
+            centraMapa(LatLng(argumentos_detalles.leyenda!!.Lat, argumentos_detalles.leyenda!!.Long), 19F)
+
             boton_todas.show()
         }
 
@@ -102,9 +106,9 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         mapa.setOnInfoWindowClickListener(this)
     }
 
-    private fun centraMapa(coords:LatLng){
+    private fun centraMapa(coords:LatLng, zoom:Float){
 
-        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(coords, 16F))
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(coords, zoom))
 
     }
 
