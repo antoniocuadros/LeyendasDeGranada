@@ -48,6 +48,22 @@ app:cardElevation="5dp"
         android:text="Leyenda del patio de los leones"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+
         />
+
+    <TextView
+        android:id="@+id/pequena_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leyenda_nombre"
+        android:text="Cuenta la leyenda que el sultán de la alhambra"
+
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:layout_margin="10dp"
+        />
+
 </RelativeLayout>
 </androidx.cardview.widget.CardView>
