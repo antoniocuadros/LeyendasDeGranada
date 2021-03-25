@@ -112,9 +112,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     }
 
     private fun centraMapa(coords:LatLng, zoom:Float){
-
         mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(coords, zoom))
-
     }
 
     private fun anadeMarcador(leyenda:Leyenda){

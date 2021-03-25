@@ -6,30 +6,36 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ListaLeyendasFragment : Fragment() {
+    lateinit var adapter:LeyendaAdapter
+    lateinit var leyendas:MutableList<Leyenda>
+    lateinit var cuadricula_leyendas: GridView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view =  inflater.inflate(R.layout.fragment_lista_leyendas, container, false)
+        val view = inflater.inflate(R.layout.fragment_lista_leyendas, container, false)
 
-        val recycler = view.findViewById<RecyclerView>(R.id.recycler_leyendas)
-        recycler.layoutManager = LinearLayoutManager(requireActivity())
-        val adapter = LeyendaAdapter()
-        recycler.adapter = adapter
+        val acceso_datos = AccesoDatos()
+        val leyendas = acceso_datos.obtenerLeyendas()
+        cuadricula_leyendas = view.findViewById<GridView>(R.id.cuadricula_leyendas)
 
-        adapter.onItemClickListener = {
-            (activity as MainActivity).onLeyendaSelected(it)
+        adapter = LeyendaAdapter(leyendas)
+
+        cuadricula_leyendas.adapter = adapter
+
+        cuadricula_leyendas.setOnItemClickListener{cuadricula_leyendas, view, i,l ->
+            val leyenda:Leyenda
+            leyenda = cuadricula_leyendas.getItemAtPosition(i) as Leyenda
+            (activity as MainActivity).onLeyendaSelected(leyenda)
         }
 
-        val leyendaList = AccesoDatos()
-
-
-        adapter.submitList(leyendaList.obtenerLeyendas())
         return view
     }
 }
