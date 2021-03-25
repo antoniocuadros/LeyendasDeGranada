@@ -105,6 +105,8 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
             anadirMarcadoresLeyendas(leyendas)
             boton_todas.hide()
             polyline1.remove()
+            //centramos de nuevo en la Alhambra
+            centraMapa(LatLng(37.1760783,-3.5881413), 16F)
 
         }
 
