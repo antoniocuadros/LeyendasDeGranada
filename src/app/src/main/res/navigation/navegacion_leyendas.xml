@@ -41,6 +41,12 @@
             app:nullable="true"
             android:defaultValue="@null"
             />
+        <argument
+            android:name="recorrido"
+            app:argType="com.acl.leyendasdelaalhambra.Recorrido"
+            app:nullable="true"
+            android:defaultValue="@null"
+            />
     </fragment>
     <fragment
         android:id="@+id/icono_recorridos"

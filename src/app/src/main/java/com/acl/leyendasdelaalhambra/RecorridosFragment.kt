@@ -33,8 +33,7 @@ class RecorridosFragment : Fragment() {
         cuadricula.setOnItemClickListener{cuadricula, view, i,l ->
             val recorrido:Recorrido
             recorrido = cuadricula.getItemAtPosition(i) as Recorrido
-
-            Toast.makeText(context,"Contiene "+ recorrido.leyendas.size + " puntos de interés" , Toast.LENGTH_SHORT).show()
+            (activity as MainActivity).onRecorridoSelected(recorrido)
         }
 
         return view

@@ -41,4 +41,9 @@ class MainActivity : AppCompatActivity() {
     fun onBotonLocalizacionSelected(leyenda: Leyenda) {
         findNavController(R.id.fragment2).navigate(LeyendaDetallesFragmentDirections.actionLeyendaDetallesFragmentToIconoMapa(leyenda))
     }
+
+    //De recorrido a mapa
+    fun onRecorridoSelected(recorrido: Recorrido) {
+        findNavController(R.id.fragment2).navigate(RecorridosFragmentDirections.actionIconoRecorridosToIconoMapa(null, recorrido))
+    }
 }
