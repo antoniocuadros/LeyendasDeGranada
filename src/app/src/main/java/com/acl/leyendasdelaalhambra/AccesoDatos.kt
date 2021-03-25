@@ -14,7 +14,8 @@ class AccesoDatos {
                         37.17710111654708,
                         -3.589237144374555,
                         "POPULARES ALHAMBRA",
-                        "Patio de los Leones"
+                        "Patio de los Leones",
+                        6
                 ),
                 Leyenda(2, "Leyenda de la Puerta de la Justicia",
                         "Cuenta la leyenda que tan sumamente recia era la construcción de la Alhambra que, aún recibiendo el ataque de mil ejércitos enemigos, jamás caería.\n"
@@ -23,7 +24,8 @@ class AccesoDatos {
                         "https://i.imgur.com/QOsNgGs.jpg",
                         37.17615558110561, -3.5902839954200045,
                         "POPULARES ALHAMBRA",
-                        "Puerta de la Justicia"
+                        "Puerta de la Justicia",
+                        1
                 ),
                 Leyenda(3, "Leyenda de la sala  de los Abencerrajes",
                         "El nombre de Abencerrajes proviene del apellido de una familia de la nobleza de la época, que tenían sus viviendas en el interior de la Alhambra.\n"
@@ -34,7 +36,8 @@ class AccesoDatos {
                         "https://i.imgur.com/X31ERYJ.jpg",
                         37.17695623969098, -3.5892068886337682,
                         "WASHINGTON IRVING",
-                        "Sala de los Abencerrajes"
+                        "Sala de los Abencerrajes",
+                        2
                 ),
                 Leyenda(4, "Leyenda de la silla del moro",
                         "Más allá del Generalife (cuando se observa desde la Alhambra), puede observarse una desnuda y pelada colina que está coronada por unas ruinas. Aún hoy día esta colina es conocida como La Silla del Moro.\n"
@@ -43,7 +46,8 @@ class AccesoDatos {
                         "https://i.imgur.com/lBd13f2.jpg",
                         37.17835794606415, -3.583555607799876,
                         "WASHINGTON IRVING",
-                        "Silla del Moro"
+                        "Silla del Moro",
+                        5
                 ),
                 Leyenda(5, "Leyenda de la torre de la cautiva",
                         "Cuenta la leyenda que Isabel de Solis, fue una cristiana capturada por Mulay Hazen y de la que posteriormente se enamoró. Un romance imposible si ella no se hubiese convertido al Islam, como finalmente ocurrió, convirtiéndose así en la reina Zoraida de Granada.\n"
@@ -52,7 +56,8 @@ class AccesoDatos {
                         "https://i.imgur.com/7GAqPkg.jpg",
                         37.17618671746534, -3.5862958470318413,
                         "POPULARES ALHAMBRA",
-                        "Torre de la Cautiva"
+                        "Torre de la Cautiva",
+                        6
                 ),
                 Leyenda(6, "Leyenda del ciprés de la sultana",
                         "Dicen que si pasas tu mano por el desgastado tronco del Ciprés de la Sultana encontrarás un amor apasionado.\n"
@@ -63,7 +68,8 @@ class AccesoDatos {
                         "https://i.imgur.com/zF3wUEg.jpg",
                         37.17825041122603, -3.5854813411045283,
                         "POPULARES ALHAMBRA",
-                        "Patio de la Sultana"
+                        "Patio de la Sultana",
+                        7
                 ),
                 Leyenda(7,
                         "Leyenda del soldado encantado",
@@ -77,7 +83,8 @@ class AccesoDatos {
                         "https://i.imgur.com/aLKbTg4.jpg",
                         37.17686273868222, -3.5920133287818055,
                         "WASHINGTON IRVING",
-                        "Torre de Vigilancia, Alcazaba"
+                        "Torre de Vigilancia, Alcazaba",
+                        1
                 ),
                 Leyenda(8, "Leyenda del origen del nombre 'Alhambra'",
                         "El nombre con el que se conoce a la Alhambra procede de una palabra musulmana cuyo significado es \"fortaleza roja\".\n"
@@ -86,7 +93,8 @@ class AccesoDatos {
                         "https://i.imgur.com/vYKCRwW.jpg",
                         37.176849988938976, -3.590408805011711,
                         "POPULARES ALHAMBRA",
-                        "Alhambra"
+                        "Alhambra",
+                        3
                 ),
                 Leyenda(9, "Leyenda de los azulejos de Mexuar",
                         "Es ésta la sala más antigua del palacio. El sultán se situaba en ella, dentro de una cámara elevada, oculta por celosías, con el fin de escuchar sin ser visto." +
@@ -97,7 +105,8 @@ class AccesoDatos {
                         "https://i.imgur.com/BHvCw1U.jpg",
                         37.177248324694595, -3.590057778130835,
                         "POPULARES ALHAMBRA",
-                        "Mexuar"
+                        "Mexuar",
+                        4
                 ),
                 Leyenda(
                         10, "Leyenda de las tres infantas",
@@ -107,7 +116,8 @@ class AccesoDatos {
                         "https://i.imgur.com/CCOwB34.jpg",
                         37.17565620470659, -3.5858588693904245,
                         "WASHINGTON IRVING",
-                        "Torre de las Infantas"
+                        "Torre de las Infantas",
+                        3
                 ),
 
                 Leyenda(
@@ -118,7 +128,8 @@ class AccesoDatos {
                         "https://i.imgur.com/wXx5nBA.jpg",
                         37.17680739307767, -3.585132236728954,
                         "WASHINGTON IRVING",
-                        "Generalife"
+                        "Generalife",
+                        4
                 ),
                 Leyenda(
                         10, "Leyenda de la campana de la Vela",
@@ -126,7 +137,8 @@ class AccesoDatos {
                         "https://i.imgur.com/2qkHe33.jpg",
                         37.177025204856676, -3.592285705487403,
                         "POPULARES ALHAMBRA",
-                        "Torre de la vela"
+                        "Torre de la vela",
+                        2
                 )
         )
 

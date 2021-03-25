@@ -1,36 +1,25 @@
 package com.acl.leyendasdelaalhambra
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
-import android.location.Location
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.checkSelfPermission
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.findNavController
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.fragment_mapa.*
 
 class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
     private lateinit var mapa: GoogleMap;
@@ -73,19 +62,29 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
         val accesoDatos = AccesoDatos()
         val leyendas = accesoDatos.obtenerLeyendas()
+        var polyline1: Polyline = mapa.addPolyline(PolylineOptions())
 
 
-        //Listener del floating button
-        boton_todas.setOnClickListener{
-            anadirMarcadoresLeyendas(leyendas)
-            boton_todas.hide()
-        }
 
         if(argumentos_detalles.leyenda == null){
             if(argumentos_detalles.recorrido != null){ //venimos de recorridos
                 val recorrido:Recorrido = argumentos_detalles.recorrido!!
                 //Mostramos los marcadores de las leyendas asociadas al recorrido
                 anadirMarcadoresLeyendas(recorrido.leyendas)
+
+                //Generamos las polilineas, para que no sea un caos se ha establecido un orden, vamos a ordenarlas.
+                val leyendas_ordenadas = recorrido.leyendas.sortedBy { it.orden }
+                var coordenadas:MutableList<LatLng> = mutableListOf()
+
+                for(leyend in leyendas_ordenadas) {
+                    coordenadas.add(LatLng(leyend.Lat, leyend.Long))
+                }
+                polyline1= mapa.addPolyline(PolylineOptions()
+                        .clickable(true).color(R.color.Rojo)
+                        .addAll(
+                            coordenadas
+                        )
+                )
 
                 boton_todas.show()
 
@@ -101,7 +100,13 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
             boton_todas.show()
         }
 
+        //Listener del floating button
+        boton_todas.setOnClickListener{
+            anadirMarcadoresLeyendas(leyendas)
+            boton_todas.hide()
+            polyline1.remove()
 
+        }
 
         mapa.setOnInfoWindowClickListener(this)
     }

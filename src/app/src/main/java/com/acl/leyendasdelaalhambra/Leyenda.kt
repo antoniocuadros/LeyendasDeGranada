@@ -9,4 +9,4 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Leyenda(val id: Long, val nombre: String, val descripcion: String,
                    val imagen: String, val Lat: Double, val Long: Double,
-                   val recorrido: String, val ubicacion:String) : Parcelable
+                   val recorrido: String, val ubicacion:String, val orden:Int) : Parcelable
