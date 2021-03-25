@@ -2,6 +2,7 @@ package com.acl.leyendasdelaalhambra
 
 class AccesoDatos {
     lateinit var listaLeyendas:MutableList<Leyenda>;
+    lateinit var recorridos:MutableList<Recorrido>
 
     constructor(){
         listaLeyendas = mutableListOf(
@@ -128,10 +129,42 @@ class AccesoDatos {
                         "Torre de la vela"
                 )
         )
+
+        recorridos = mutableListOf(
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1"))
+        )
     }
 
     public fun obtenerLeyendas():MutableList<Leyenda>{
         return listaLeyendas;
+    }
+
+    public fun obtenerRecorridos():MutableList<Recorrido>{
+        return recorridos;
     }
 
     public fun obtenerLeyendasRecorrido(recorrido:String):MutableList<Leyenda>{
