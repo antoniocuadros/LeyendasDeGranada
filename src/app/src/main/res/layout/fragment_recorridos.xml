@@ -3,18 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecorridosFragment">
-
+    tools:context=".RecorridosFragment"
+    android:background="@color/Fondo_cartas"
+    >
     <GridView
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/cuadricula_leyendas"
-        android:horizontalSpacing="16dp"
+        android:horizontalSpacing="10dp"
         android:numColumns="auto_fit"
-        android:verticalSpacing="15dp"
+        android:verticalSpacing="10dp"
         >
-
-
     </GridView>
-
 </LinearLayout>

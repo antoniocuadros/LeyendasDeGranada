@@ -155,8 +155,35 @@ class AccesoDatos {
                 "Recorrido Alhambra",
                 "Conjunto de leyendas de la Alhambra",
                 "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
+                this.obtenerLeyendasRecorrido("Recorrido 1")),
+            Recorrido(1,
+                "Recorrido Alhambra",
+                "Conjunto de leyendas de la Alhambra",
+                "url_ejemplo",
                 this.obtenerLeyendasRecorrido("Recorrido 1"))
         )
+
+
     }
 
     public fun obtenerLeyendas():MutableList<Leyenda>{

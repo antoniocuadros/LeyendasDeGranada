@@ -12,4 +12,6 @@
     <color name="IconGreenSelected">#224B00</color>
     <color name="FondoLista">#89BD5E</color>
     <color name="Texto">#836953</color>
+    <color name="Fondo_carta">#2d2d2d</color>
+    <color name="Fondo_cartas">#000000</color>
 </resources>
