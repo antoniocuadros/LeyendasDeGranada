@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.recorrido_item.view.*
 
 class RecorridoAdapter(var listaRecorridos:MutableList<Recorrido>): BaseAdapter(){
@@ -22,6 +23,7 @@ class RecorridoAdapter(var listaRecorridos:MutableList<Recorrido>): BaseAdapter(
         val texto_recorrido = vista.findViewById<TextView>(R.id.texto_recorrido)
 
         imagen_recorrido.setImageResource(R.drawable.leones)
+        Glide.with(vista).load(recorrido.imagen).into(imagen_recorrido);
         texto_recorrido.text = recorrido.nombre
 
         return vista

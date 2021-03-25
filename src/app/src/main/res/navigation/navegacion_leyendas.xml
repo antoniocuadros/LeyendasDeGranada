@@ -46,5 +46,9 @@
         android:id="@+id/icono_recorridos"
         android:name="com.acl.leyendasdelaalhambra.RecorridosFragment"
         android:label="fragment_recorridos"
-        tools:layout="@layout/fragment_recorridos" />
+        tools:layout="@layout/fragment_recorridos" >
+        <action
+            android:id="@+id/action_icono_recorridos_to_icono_mapa"
+            app:destination="@id/icono_mapa" />
+    </fragment>
 </navigation>
