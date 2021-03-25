@@ -14,21 +14,30 @@
         android:background="@color/Fondo_carta"
         >
 
-        <ImageView
-            android:layout_centerHorizontal="true"
-            android:id="@+id/imagen_recorrido"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:scaleType="centerCrop"
             android:layout_height="120dp"
-            android:src="@drawable/imagen_prueba"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/carta_imagen"
             android:layout_margin="10dp"
-        />
+
+            >
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imagen_recorrido"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_height="120dp"
+                android:src="@drawable/imagen_prueba"
+                />
+        </androidx.cardview.widget.CardView>
+
 
         <TextView
             android:id="@+id/texto_recorrido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imagen_recorrido"
+            android:layout_below="@+id/carta_imagen"
 
             android:layout_marginTop="1dp"
 

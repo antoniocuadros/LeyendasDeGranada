@@ -22,7 +22,7 @@ class AccesoDatos {
                                 "Se decía que el día en que la llave del arco interior de la Puerta de la Justicia y la mano de su arco exterior se unan, la Alhambra caerá porque ese día habrá llegado el fin del mundo. También asegura la leyenda que tal era la magnificiencia del Arco de la Justicia, que se aseguraba que ningún caballero, montado a caballo con su lanza, podría tocar con la punta de ésta la mano esculpida en lo alto del arco exterior. Tan seguros estaban de ello, que aseguraban que quien lo consiguiese conquistaría el trono de la Alhambra.",
                         "https://i.imgur.com/QOsNgGs.jpg",
                         37.17615558110561, -3.5902839954200045,
-                        "WASHINGTON IRVING",
+                        "POPULARES ALHAMBRA",
                         "Puerta de la Justicia"
                 ),
                 Leyenda(3, "Leyenda de la sala  de los Abencerrajes",

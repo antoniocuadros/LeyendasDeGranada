@@ -21,10 +21,12 @@ class RecorridoAdapter(var listaRecorridos:MutableList<Recorrido>): BaseAdapter(
 
         val imagen_recorrido = vista.findViewById<ImageView>(R.id.imagen_recorrido)
         val texto_recorrido = vista.findViewById<TextView>(R.id.texto_recorrido)
+        val texto_paradas = vista.findViewById<TextView>(R.id.texto_paradas)
 
         imagen_recorrido.setImageResource(R.drawable.leones)
         Glide.with(vista).load(recorrido.imagen).into(imagen_recorrido);
         texto_recorrido.text = recorrido.nombre
+        texto_paradas.text = "Paradas: " + recorrido.leyendas.size
 
         return vista
     }
