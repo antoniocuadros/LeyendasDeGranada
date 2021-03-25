@@ -1,18 +1,18 @@
 package com.acl.leyendasdelaalhambra
 
-import android.media.Image
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.fragment_leyenda_detalles.*
 
 class LeyendaDetallesFragment : Fragment() {
     private val argumentos_recibidos_leyendas: LeyendaDetallesFragmentArgs by navArgs()
@@ -29,9 +29,14 @@ class LeyendaDetallesFragment : Fragment() {
         val nombreText = view.findViewById<TextView>(R.id.nombre_leyenda_detalles)
         val descripcionText = view.findViewById<TextView>(R.id.descripcion_leyenda_detalles)
         val imagen_leyenda = view.findViewById<ImageView>(R.id.imagen_leyenda_detalles)
+        val derechos = view.findViewById<TextView>(R.id.derechos_leyenda)
 
         nombreText.text = leyenda.nombre
         descripcionText.text = leyenda.descripcion
+        derechos.text = leyenda.fuente.take(50)
+
+        derechos.setMovementMethod(LinkMovementMethod.getInstance())
+
         Glide.with(this).load(leyenda.imagen).into(imagen_leyenda);
 
         val boton = view.findViewById<Button>(R.id.boton_localizacion)
@@ -41,6 +46,13 @@ class LeyendaDetallesFragment : Fragment() {
             (activity as MainActivity).onBotonLocalizacionSelected(leyenda)
         }
 
+        //Texto derechos
+        derechos.setOnClickListener {
+            val i = Intent(Intent.ACTION_VIEW)
+            i.setData(Uri.parse(leyenda.fuente))
+            getActivity()?.startActivity(i)
+        }
+        
         return view
     }
 

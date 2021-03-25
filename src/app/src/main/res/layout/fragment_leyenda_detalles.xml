@@ -70,6 +70,7 @@
                 android:backgroundTint="@color/black"
                 />
 
+
             <TextView
                 android:padding="10dp"
                 android:id="@+id/descripcion_leyenda_detalles"
@@ -83,6 +84,32 @@
                 tools:text="Hace muchos años una Princesa llamada Zaira, viajó hasta Granada con su padre. Se alojaron en las dependencias de La Alhambra. Zaira se sentía muy sola ya que solo contaba con la compañía de su padre y un séquito de 11 hombre que velaban por su seguridad. Un día, la Princesa leyó el diario de su padre donde contaba que había matado a los verdaderos padres de Zaira cuando ella tenía 1 año.Al parecer, su madre había echado un maleficio al talismán y si la niña algún día se enteraba de la verdad, una maldición caería sobre el Rey. En el patio donde ahora se encuentra el Patio de Los Leones, la joven le preguntó a su padre si lo que había leído era cierto, su padre lo afirmó y cuenta la leyenda que el talismán se activó y su padre con los 11 hombres se convirtieron en 12 leones de piedra, los que coronan hoy en día el Patio de los Leones."
 
                 />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Fuente:"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="html://misitiowebmisitiowebmisitioweb.com/leyendas"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="10dp"
+                android:id="@+id/derechos_leyenda"
+                android:textColor="@color/purple_700"
+                >
+
+
+            </TextView>
 
             <Button
                 android:layout_width="160dp"

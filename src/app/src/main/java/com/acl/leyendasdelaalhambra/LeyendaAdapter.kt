@@ -32,6 +32,8 @@ class LeyendaAdapter(var listaLeyendas:MutableList<Leyenda>): BaseAdapter(){
         nombre_leyenda.text = leyenda.nombre
         var text_desc = leyenda.descripcion.take(50)+"..."
         descripcion_pequena.text = text_desc
+
+
         return vista
     }
 
