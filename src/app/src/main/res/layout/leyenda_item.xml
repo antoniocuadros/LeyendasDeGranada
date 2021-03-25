@@ -29,8 +29,9 @@
             android:id="@+id/leyenda_nombre"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
             android:textColor="@color/Texto"
             android:textSize="16sp"
             tools:text="Leyenda del patio de los leones" />
