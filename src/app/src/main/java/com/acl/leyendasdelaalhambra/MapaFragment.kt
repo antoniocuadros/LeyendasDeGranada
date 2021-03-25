@@ -82,10 +82,16 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
             boton_todas.hide()
         }
 
-        if(argumentos_detalles.leyenda == null){ //no venimos de los detalles
-            anadirMarcadoresLeyendas(leyendas)
+        if(argumentos_detalles.leyenda == null){
+
+            if(argumentos_detalles.recorrido != null){ //venimos de recorridos
+                Toast.makeText(context,"hola recorrido", Toast.LENGTH_SHORT).show()
+            }//venimos de la pestaña detalles
+            else{//no venimos de los detalles
+                anadirMarcadoresLeyendas(leyendas)
+            }
         }
-        else{ //venimos de la pestaña detalles
+        else{
             anadeMarcador(argumentos_detalles.leyenda!!)
             centraMapa(LatLng(argumentos_detalles.leyenda!!.Lat, argumentos_detalles.leyenda!!.Long))
             boton_todas.show()
