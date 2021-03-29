@@ -12,7 +12,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.fragment_leyenda_detalles.*
+import me.relex.circleindicator.CircleIndicator3
 
 class LeyendaDetallesFragment : Fragment() {
     private val argumentos_recibidos_leyendas: LeyendaDetallesFragmentArgs by navArgs()
@@ -52,7 +55,18 @@ class LeyendaDetallesFragment : Fragment() {
             i.setData(Uri.parse(leyenda.fuente))
             getActivity()?.startActivity(i)
         }
-        
+
+        //Slider de imágenes
+        var imagen_list = mutableListOf<String>(leyenda.imagen)
+        var viewpager_imagenes = view.findViewById<ViewPager2>(R.id.viewpager_imagenes)
+
+        viewpager_imagenes.adapter = SliderImagenesAdapter(imagen_list)
+        viewpager_imagenes.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        val indicador_pagina_imagen_slider = view.findViewById<CircleIndicator3>(R.id.indicador_slider)
+        indicador_pagina_imagen_slider.setViewPager(viewpager_imagenes)
+
+
         return view
     }
 

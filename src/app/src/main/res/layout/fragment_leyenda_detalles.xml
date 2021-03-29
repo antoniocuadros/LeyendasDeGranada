@@ -111,6 +111,20 @@
 
             </TextView>
 
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/viewpager_imagenes"
+                />
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:layout_width="260dp"
+                android:gravity="center"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:id="@+id/indicador_slider"
+                android:background="@color/BackgroudGreen"/>
+
             <Button
                 android:layout_width="160dp"
                 android:layout_height="60dp"
