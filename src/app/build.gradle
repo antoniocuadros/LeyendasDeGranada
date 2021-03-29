@@ -73,4 +73,7 @@ dependencies {
 
     //cardview
     implementation "androidx.cardview:cardview:1.0.0"
+
+    //para leer json como objetos
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
