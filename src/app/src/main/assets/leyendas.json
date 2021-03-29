@@ -62,7 +62,7 @@
     "ubicacion": "Torre de la Cautiva",
     "orden": 6,
     "fuente": "https://www.elviajerofisgon.com/magazine/las-7-leyendas-la-alhambra-no-podras-olvidar/",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": ["https://i.imgur.com/MKAph6M.jpg", "https://i.imgur.com/qYgQiAH.jpg"]
   },
   {
     "id": "6",
@@ -75,7 +75,7 @@
     "ubicacion": "Patio de la Sultana",
     "orden": 7,
     "fuente": "https://www.turgranada.es/fichas/cipres-del-patio-de-la-acequia-del-generalife-46922/",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": ["https://i.imgur.com/PJR3mBY.jpg"]
   },
   {
     "id": "7",
