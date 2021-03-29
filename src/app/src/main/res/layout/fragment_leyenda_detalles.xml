@@ -115,6 +115,7 @@
                 android:layout_width="160dp"
                 android:layout_height="160dp"
                 android:id="@+id/viewpager_imagenes"
+                android:layout_gravity="center"
                 />
 
             <me.relex.circleindicator.CircleIndicator3
