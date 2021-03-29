@@ -23,8 +23,8 @@ class SliderImagenesAdapter(var imagen:MutableList<String>):RecyclerView.Adapter
     }
 
     override fun onBindViewHolder(holder: SliderImagenesAdapter.Pager2ViewHolder, position: Int) {
-        //Glide.with(holder.itemView).load(imagen[position]).into(holder.imagen);
-        holder.imagen.setImageResource(R.drawable.imagen_prueba)
+        Glide.with(holder.itemView).load(imagen[position]).into(holder.imagen);
+        //holder.imagen.setImageResource(R.drawable.imagen_prueba)
     }
 
 }
