@@ -81,6 +81,12 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
                 for(leyend in leyendas_ordenadas) {
                     coordenadas.add(LatLng(leyend.Lat, leyend.Long))
                 }
+
+
+                //centramos la vista en el recorrido
+                centraMapa(LatLng(recorrido.Latitud , recorrido.Longitud), recorrido.zoom)
+
+                //creamos la polilinea
                 polyline1= mapa.addPolyline(PolylineOptions()
                         .clickable(true).color(R.color.Rojo)
                         .addAll(
@@ -90,8 +96,6 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
                 boton_todas.show()
 
-                //centramos la vista en el recorrido
-                centraMapa(LatLng(recorrido.Latitud , recorrido.Longitud), recorrido.zoom)
 
             }
             else{//no venimos de los detalles
