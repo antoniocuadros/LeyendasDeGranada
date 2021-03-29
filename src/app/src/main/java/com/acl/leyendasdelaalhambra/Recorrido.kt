@@ -11,6 +11,7 @@ data class Recorrido(val id: Long,
                      val imagen: String,
                      val nombre_recorrido:String,
                      var leyendas:MutableList<Leyenda>,
-                     var LatitudLongitud:LatLng,
+                     var Latitud:Float,
+                     var Longitud: Float,
                      var zoom:Float
                      ) : Parcelable

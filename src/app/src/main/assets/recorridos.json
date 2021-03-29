@@ -5,7 +5,10 @@
     "descripcion": "Conjunto de leyendas de la Alhambra",
     "imagen": "https://i.imgur.com/q7WAIXz.jpg",
     "nombre_recorrido": "WASHINGTON IRVING",
-    "leyendas": []
+    "leyendas": [],
+    "Latitud": "",
+    "Longitud": "",
+    "zoom": ""
   },
   {
     "id": "2",
@@ -13,7 +16,10 @@
     "descripcion": "Conjunto de leyendas de la Alhambra",
     "imagen": "https://i.imgur.com/dXP2uLL.jpg",
     "nombre_recorrido": "POPULARES ALHAMBRA",
-    "leyendas": []
+    "leyendas": [],
+    "Latitud": "",
+    "Longitud": "",
+    "zoom": ""
   },
   {
     "id": "3",
@@ -21,7 +27,10 @@
     "descripcion": "Conjunto de historias/mitos/leyendas relacionadas con el amor en Granada",
     "imagen": "https://i.imgur.com/03M3bOW.jpg",
     "nombre_recorrido": "LEYENDASAMOROSAS",
-    "leyendas": []
+    "leyendas": [],
+    "Latitud": "",
+    "Longitud": "",
+    "zoom": ""
   },
   {
     "id": "4",
@@ -29,6 +38,9 @@
     "descripcion": "Conjunto de historias/mitos/leyendas relacionadas con el Realejo en Granada",
     "imagen": "https://i.imgur.com/1jmPHDl.jpg",
     "nombre_recorrido": "REALEJO",
-    "leyendas": []
+    "leyendas": [],
+    "Latitud": "",
+    "Longitud": "",
+    "zoom": ""
   }
 ]
