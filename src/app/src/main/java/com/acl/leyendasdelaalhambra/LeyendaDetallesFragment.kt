@@ -42,11 +42,22 @@ class LeyendaDetallesFragment : Fragment() {
 
         Glide.with(this).load(leyenda.imagen).into(imagen_leyenda);
 
-        val boton = view.findViewById<Button>(R.id.boton_localizacion)
+        val boton_localizacion = view.findViewById<Button>(R.id.boton_localizacion)
+        val boton_sitio= view.findViewById<Button>(R.id.boton_sitio_web)
 
         //Botón de la ubicación
-        boton.setOnClickListener {
+        boton_localizacion.setOnClickListener {
             (activity as MainActivity).onBotonLocalizacionSelected(leyenda)
+        }
+
+        //Botón del sitio
+        if(leyenda.sitio_web == ""){
+            boton_sitio.visibility =  View.GONE
+        }
+        boton_sitio.setOnClickListener {
+            val i = Intent(Intent.ACTION_VIEW)
+            i.setData(Uri.parse(leyenda.sitio_web))
+            getActivity()?.startActivity(i)
         }
 
         //Texto derechos
