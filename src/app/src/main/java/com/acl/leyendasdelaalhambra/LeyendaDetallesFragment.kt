@@ -57,7 +57,7 @@ class LeyendaDetallesFragment : Fragment() {
         }
 
         //Slider de imágenes
-        var imagen_list = mutableListOf<String>(leyenda.imagen)
+        var imagen_list = leyenda.imagenes_adicionales
         var viewpager_imagenes = view.findViewById<ViewPager2>(R.id.viewpager_imagenes)
 
         viewpager_imagenes.adapter = SliderImagenesAdapter(imagen_list)

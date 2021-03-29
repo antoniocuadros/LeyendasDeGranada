@@ -10,7 +10,7 @@
     "ubicacion": "Patio de los Leones",
     "orden": 6,
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": ["https://i.imgur.com/jI0wzK6.jpg", "https://i.imgur.com/2T76lcu.jpg"]
   },
   {
     "id": "2",
@@ -23,7 +23,7 @@
     "ubicacion": "Puerta de la Justicia",
     "orden": 1,
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": ["https://i.imgur.com/Aqm47DV.jpg", "https://i.imgur.com/xz48C00.jpg"]
   },
   {
     "id": "3",
@@ -36,7 +36,7 @@
     "ubicacion": "Sala de los Abencerrajes",
     "orden": 2,
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": ["https://i.imgur.com/M8mFaCM.jpg", "https://i.imgur.com/yRSvT84.jpg"]
   },
   {
     "id": "4",
