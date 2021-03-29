@@ -6,20 +6,20 @@
     "imagen": "https://i.imgur.com/q7WAIXz.jpg",
     "nombre_recorrido": "WASHINGTON IRVING",
     "leyendas": [],
-    "Latitud": "",
-    "Longitud": "",
-    "zoom": ""
+    "Latitud": 37.1760783,
+    "Longitud": -3.5881413,
+    "zoom": 15.5
   },
   {
     "id": "2",
-    "nombre": "Leyendas Alhambra origen desconocido",
+    "nombre": "Leyendas Alhambra origen popular",
     "descripcion": "Conjunto de leyendas de la Alhambra",
     "imagen": "https://i.imgur.com/dXP2uLL.jpg",
     "nombre_recorrido": "POPULARES ALHAMBRA",
     "leyendas": [],
-    "Latitud": "",
-    "Longitud": "",
-    "zoom": ""
+    "Latitud": 37.17660880794396,
+    "Longitud": -3.589014276089903,
+    "zoom": 16
   },
   {
     "id": "3",
@@ -28,9 +28,9 @@
     "imagen": "https://i.imgur.com/03M3bOW.jpg",
     "nombre_recorrido": "LEYENDASAMOROSAS",
     "leyendas": [],
-    "Latitud": "",
-    "Longitud": "",
-    "zoom": ""
+    "Latitud": 37.179710163654626,
+    "Longitud": -3.5871236298320084,
+    "zoom": 14.5
   },
   {
     "id": "4",
@@ -39,8 +39,8 @@
     "imagen": "https://i.imgur.com/1jmPHDl.jpg",
     "nombre_recorrido": "REALEJO",
     "leyendas": [],
-    "Latitud": "",
-    "Longitud": "",
-    "zoom": ""
+    "Latitud": 37.173540912192465,
+    "Longitud": -3.592646290340156,
+    "zoom": 17
   }
 ]

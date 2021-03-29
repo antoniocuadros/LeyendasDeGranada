@@ -6,6 +6,8 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.util.Half
+import android.util.Half.toFloat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -54,11 +56,11 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
     //se llama cuando se cargue el mapa
     override fun onMapReady(_mapa: GoogleMap) {
-        val alhambra= LatLng(37.1760783, -3.5881413)
+        val alhambra= LatLng(37.176406225511954, -3.5885636167711206)
 
         mapa = _mapa;
         activarUbicacionTiempoReal()
-        centraMapa(alhambra, 16F);
+        centraMapa(alhambra, 15.5F);
 
         val accesoDatos = AccesoDatos(context)
         val leyendas = accesoDatos.obtenerLeyendas()
@@ -89,7 +91,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
                 boton_todas.show()
 
                 //centramos la vista en el recorrido
-                centraMapa(recorrido.LatitudLongitud, recorrido.zoom)
+                centraMapa(LatLng(recorrido.Latitud , recorrido.Longitud), recorrido.zoom)
 
             }
             else{//no venimos de los detalles
@@ -109,7 +111,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
             boton_todas.hide()
             polyline1.remove()
             //centramos de nuevo en la Alhambra
-            centraMapa(LatLng(37.1760783,-3.5881413), 16F)
+            centraMapa(LatLng(37.1760783,-3.5881413), 15.5F)
 
         }
 
