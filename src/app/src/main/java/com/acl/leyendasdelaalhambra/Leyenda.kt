@@ -17,5 +17,6 @@ data class Leyenda(val id: Long,
                    val ubicacion:String,
                    val orden:Int,
                    val fuente:String,
-                   val imagenes_adicionales:MutableList<String>
+                   val imagenes_adicionales:MutableList<String>,
+                   val sitio_web:String
                    ) : Parcelable
