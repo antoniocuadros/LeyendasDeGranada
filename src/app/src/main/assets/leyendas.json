@@ -169,7 +169,7 @@
   },
   {
     "id": "13",
-    "nombre": "El hombre que salvó la Alhambra de su destrucción",
+    "nombre": "El hombre que salvó la Alhambra",
     "descripcion": "La ciudad de Granada sufrió en sus carnes las consecuencias más dolorosas de la invasión francesa. Una parte de la estructura que conforma el complejo de la Alhambra quedó destruida. En su retirada forzosa, el mariscal francés Jean de Dieu Soult ordenó volar por los aires las fortificaciones de la Alhambra de Granada. Entre el mito y la realidad, las torres del recinto fueron explotando una tras otra hasta que, cerca ya de los palacios nazaríes, el cabo de Inválidos José García obstaculizó el hilo de pólvora con su propio cuerpo. Su hazaña evitó una pérdida histórica, no así las otras muchas que sufrió el patrimonio cultural español durante aquella guerra, donde incluso los aliados ingleses participaron del expolio. \n\n Para rendir homenaje a su hazaña, en el Patio de los Arrayanes podemos leer “«A la memoria del cabo de ‘Inválidos’ José García que con riesgo de perder la vida salvó la Reina de los Alcázares y torres de la Alambra en 1812»",
     "imagen": "https://i.imgur.com/RvZQ6S6.jpg",
     "Lat": 37.176645600828664,
@@ -180,5 +180,47 @@
     "fuente": "https://nuevatribuna.publico.es/articulo/historia/hombre-alhambra-historia-granada/20180727095930154276.amp.html",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.alhambradegranada.org/es/info/palaciodecarlosvyalrededores/plazadelosaljibes.asp"
+  },
+  {
+    "id": "13",
+    "nombre": "Las dos piedras del Sacromonte",
+    "descripcion": "Cuenta la leyenda que en la abadía del Sacromonte existen dos piedras con un poder tal que marcarán nuestra vida amorosa: ¡cuidado! para bien, o para mal.\n\nAl contacto con la piedra negra el visitante encontrará a su media naranja en el transcurso de un año. Por el contrario, el contacto con la piedra blanca producirá como efecto que nuestra pareja actual desaparecerá para siempre de nuestras vidas.",
+    "imagen": "https://i.imgur.com/qhDk1e1.jpg",
+    "Lat": 37.182959523751066,
+    "Long": -3.5767658693044377,
+    "recorrido": "LEYENDASAMOROSAS",
+    "ubicacion": "Abadía del Sacromonte",
+    "orden": "3",
+    "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
+    "imagenes_adicionales": [],
+    "sitio_web" : "https://www.archidiocesisgranada.es/index.php/patrimonio-cultural/abadia-del-sacromonte"
+  },
+  {
+    "id": "14",
+    "nombre": "La Dama blanca del Castril",
+    "descripcion": "La casa de Castril se construyo sobre los cimientos de un palacio árabe. Los Reyes Católicos para recompensar a su secretario Hernando Zafra le permitieron construir su casa aquí.\n\n\nCuenta la leyenda que Zafra vivía con su hija Elvira de dieciocho años. Ya que éste enviudó, se decía de él que tenía muy mal humor y que estaba enemistado con los granadinos por su trato despectivo. Para más inri, su hija Elvira se enamoró del hijo de una familia enemiga del malhumorado secretario: Alfonso de Quintanilla.\n\n\nÉstos se veían algunas noches en su habitación con la ayuda de un paje. Una de estas noches estuvieron apunto de ser sorprendidos por Zafra pero a Alonso le dio tiempo a escapar. Cuando el padre de Elvira abrió la puerta encontró a su hija medio desnuda al lado del paje que les ayudaba. El padre de Elvira, al verlos a los dos, pensó que el paje era quien había deshonrado a su hija y, vuelto en cólera, decidió mandar colgar por el balcón en ese mismo instante al criado.\n\n\nEl paje pidió clemencia mientras Hernando de Zafra le espetaba: “pide cuanta justicia quieras. Ahí ahorcado puedes quedar esperando la del cielo cuanto tiempo te plazca”. Acontinuación de la ejecución, el malvado Hernando de Zafra mandó tapiar el balcón y escribir en la pared la frase “Esperándola del cielo”. Elvira fue encerrada en su habitación hasta que un día sin poder soportarlo más y acabó con su vida con un potente veneno.",
+    "imagen": "https://i.imgur.com/9P26AdK.jpg",
+    "Lat": 37.17866564908442,
+    "Long": -3.591608150638523,
+    "recorrido": "LEYENDASAMOROSAS",
+    "ubicacion": "Casa de Castril, Carrera del Darro",
+    "orden": "1",
+    "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
+    "imagenes_adicionales": [],
+    "sitio_web" : "https://rinconesdegranada.com/casa-de-castril"
+  },
+  {
+    "id": "15",
+    "nombre": "Fuente del amor eterno",
+    "descripcion": "Historia de amor entre la bella granadina Elvira Padilla y el joven mercader napolitano Gaspar de Facco.\n\nCuenta la leyenda que Elvira, poseedora de una hermosa fuente de mármol blanco en su casa pasaba tardes enteras junto a ella deseando encontrar el verdadero amor. Un tarde paseando por el mercado de Bib-Rambla su delicada mirada se cruzó con la de un joven napolitano venido a Granada para cerrar unos asuntos económicos. Impresionado por la belleza de la joven, solicitó el italiano audiencia con el padre de la joven, don Luis Padilla y Miota, el cual al recibir al joven y descubrir su verdadero objetivo montó en cólera.\n\nAntes de producirse dicha recepción, el joven consigue ,mediante una ama de llaves de la joven Elvira, entregarle unas cartas de amor que ésta lee y acepta verse con él a escondidas en su fuente de amor.\n\nIntuyendo el negro futuro que se les avecinaba y sin querer perder la oportunidad de conocerse, los jóvenes escaparon hacia Motril para coger el barco que les llevaría a Nápoles y emprender la vida juntos.\n\nEn los alrededores de Alhendín fueron apresados por los contactos del padre de Elvira, que redujeron al mozo hasta la muerte y llevaron a Elvira hasta su casa de Granada.\n\nSu padre ordenó que pasara el resto de sus días en el convento de las Comendadoras de Santiago, no sin antes pedirle la joven como último deseo pasar unas horas junto a su fuente. \n\nCuando la madre de la joven la ve tumbada en la fuente observa cómo ésta se encuentra repleta de las más hermosas flores de la ciudad. Una vez los padres de Elvira murieron, la fuente y la casa quedaron abandonados merced del paso del tiempo. Con el paso de los años, las jóvenes parejas, conocedoras de la leyenda, acuden a la fuente a prometerse amor eterno y depositar ante ella unas flores que recuerden tan bella historia de amor. La fuente se localiza en el patio del palacio de los Córdova.",
+    "imagen": "https://i.imgur.com/wzOkG1h.jpg",
+    "Lat": 37.17969274600918,
+    "Long": -3.5878239960714438,
+    "recorrido": "LEYENDASAMOROSAS",
+    "ubicacion": "Palacio de los Córdova",
+    "orden": "2",
+    "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
+    "imagenes_adicionales": [],
+    "sitio_web" : "https://www.andalucia.org/es/granada-turismo-cultural-palacio-de-los-cordova"
   }
 ]
