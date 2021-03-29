@@ -60,7 +60,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         activarUbicacionTiempoReal()
         centraMapa(alhambra, 16F);
 
-        val accesoDatos = AccesoDatos()
+        val accesoDatos = AccesoDatos(context)
         val leyendas = accesoDatos.obtenerLeyendas()
         var polyline1: Polyline = mapa.addPolyline(PolylineOptions())
 

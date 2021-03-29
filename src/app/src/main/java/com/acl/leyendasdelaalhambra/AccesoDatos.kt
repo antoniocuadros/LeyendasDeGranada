@@ -1,15 +1,16 @@
 package com.acl.leyendasdelaalhambra
 
 import android.content.Context
-import org.json.JSONArray
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import java.io.InputStream
-import java.nio.channels.AsynchronousFileChannel.open
 
 class AccesoDatos {
     lateinit var listaLeyendas:MutableList<Leyenda>;
     lateinit var recorridos:MutableList<Recorrido>
 
-    constructor(context: Context){
+    constructor(context: Context?){
+        /*
         listaLeyendas = mutableListOf(
                 Leyenda(1, "Leyenda del Patio de los Leones",
                         "Hace muchos años una Princesa llamada Zaira, viajó hasta Granada con su padre. Se alojaron en las dependencias de La Alhambra. Zaira se sentía muy sola ya que solo contaba con la compañía de su padre y un séquito de 11 hombre que velaban por su seguridad. Un día, la Princesa leyó el diario de su padre donde contaba que había matado a los verdaderos padres de Zaira cuando ella tenía 1 año.Al parecer, su madre había echado un maleficio al talismán y si la niña algún día se enteraba de la verdad, una maldición caería sobre el Rey.\n"
@@ -158,7 +159,8 @@ class AccesoDatos {
                     "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
                 )
         )
-
+        */
+        listaLeyendas = obtener_datos_leyendas_json(context)
         recorridos = mutableListOf(
             Recorrido(1,
                 "Leyendas Alhambra WASHINGTON IRVING",
@@ -171,12 +173,25 @@ class AccesoDatos {
                 "https://i.imgur.com/dXP2uLL.jpg",
                 this.obtenerLeyendasRecorrido("POPULARES ALHAMBRA"))
         )
-
-        obtener_datos_json(context)
+        
     }
 
-    private fun obtener_datos_json(context: Context) {
+    private fun obtener_datos_leyendas_json(context: Context?): MutableList<Leyenda> {
         //Hay que leer el archivo JSON y parsearlo a un objeto leyenda
+        //Extraemos en string el Json
+        val leyendas_texto:String
+        val inputStream:InputStream = context?.assets!!.open("leyendas.json")
+
+        leyendas_texto = inputStream.bufferedReader().use{it.readText()}
+
+        var listaLeyendas:MutableList<Leyenda>
+
+        val gson = Gson()
+        val tipo_a_leer = object :TypeToken<MutableList<Leyenda>>() {}.type
+
+        listaLeyendas = gson.fromJson<MutableList<Leyenda>>(leyendas_texto, tipo_a_leer)
+
+        return listaLeyendas
 
     }
 
