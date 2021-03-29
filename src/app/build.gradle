@@ -80,4 +80,7 @@ dependencies {
     //Slider de imágenes
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'me.relex:circleindicator:2.1.6'
+
+    //Clustering Google Maps
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
 }
