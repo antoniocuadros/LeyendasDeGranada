@@ -131,7 +131,7 @@ class AccesoDatos {
                 ),
 
                 Leyenda(
-                        10, "Leyenda de Ahmed al Kamel",
+                        11, "Leyenda de Ahmed al Kamel",
                         "Cuenta la leyenda como en el Generalife se encerró de niño al príncipe Ahmed, a quien un vidente le había pronosticado un buen futuro excepto en el amor. El rey, para evitar que sufriera, lo recluyó en el Generalife con su filósofo Abben, bajo la pena de que si este le explicaba lo que era el amor le cortaría la cabeza.\n"
                                 +"\n"+
                                 "El muchacho creció y cada vez le interesaban menos los estudios, por lo que Abben le enseñó la lengua de los pájaros. Un día escuchó a un pájaro entonar el “canto del amor”, lo que le suscitó mucha curiosidad. Al poco tiempo cayó del cielo un ave perseguida por un halcón y Amhed la curó. A cambio, le preguntó qué era el amor. Una vez lo supo no podía quitárselo de la cabeza y escapaba del Generalife a observar a las muchachas de la corte. Finalmente se enamoró de una de ellas y juntos se marcharon, siendo, contrariamente a lo que le vaticinaron, muy felices.",
@@ -143,7 +143,7 @@ class AccesoDatos {
                     "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
                 ),
                 Leyenda(
-                        10, "Leyenda de la campana de la Vela",
+                        12, "Leyenda de la campana de la Vela",
                         "Según cuenta la tradición, la mujer soltera que toque la campana que se encuentra en la parte superior de la Torre de la Vela, la más alta de la torre, el dos de enero, día de la Toma de Granada, ese año encontrará marido y se casará.",
                         "https://i.imgur.com/2qkHe33.jpg",
                         37.177025204856676, -3.592285705487403,
