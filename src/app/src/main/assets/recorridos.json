@@ -14,5 +14,13 @@
     "imagen": "https://i.imgur.com/dXP2uLL.jpg",
     "nombre_recorrido": "POPULARES ALHAMBRA",
     "leyendas": []
+  },
+  {
+    "id": "3",
+    "nombre": "Historias invasión francesa",
+    "descripcion": "Conjunto de historias/mitos/leyendas relacionadas con la invasión francesa",
+    "imagen": "https://i.imgur.com/twKhJvL.jpg",
+    "nombre_recorrido": "RECORRIDOFRANCESES",
+    "leyendas": []
   }
 ]

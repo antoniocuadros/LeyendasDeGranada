@@ -166,5 +166,19 @@
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/torre-de-la-vela"
+  },
+  {
+    "id": "13",
+    "nombre": "El hombre que salvó la Alhambra de su destrucción",
+    "descripcion": "La ciudad de Granada sufrió en sus carnes las consecuencias más dolorosas de la invasión francesa. Una parte de la estructura que conforma el complejo de la Alhambra quedó destruida. En su retirada forzosa, el mariscal francés Jean de Dieu Soult ordenó volar por los aires las fortificaciones de la Alhambra de Granada. Entre el mito y la realidad, las torres del recinto fueron explotando una tras otra hasta que, cerca ya de los palacios nazaríes, el cabo de Inválidos José García obstaculizó el hilo de pólvora con su propio cuerpo. Su hazaña evitó una pérdida histórica, no así las otras muchas que sufrió el patrimonio cultural español durante aquella guerra, donde incluso los aliados ingleses participaron del expolio. \n\n Para rendir homenaje a su hazaña, en el Patio de los Arrayanes podemos leer “«A la memoria del cabo de ‘Inválidos’ José García que con riesgo de perder la vida salvó la Reina de los Alcázares y torres de la Alambra en 1812»",
+    "imagen": "https://i.imgur.com/RvZQ6S6.jpg",
+    "Lat": 37.176645600828664,
+    "Long": -3.5909477552580986,
+    "recorrido": "RECORRIDOFRANCESES",
+    "ubicacion": "Patio de los Aljibes, frente a Puerta del Vino",
+    "orden": "1",
+    "fuente": "https://nuevatribuna.publico.es/articulo/historia/hombre-alhambra-historia-granada/20180727095930154276.amp.html",
+    "imagenes_adicionales": [],
+    "sitio_web" : "https://www.alhambradegranada.org/es/info/palaciodecarlosvyalrededores/plazadelosaljibes.asp"
   }
 ]
