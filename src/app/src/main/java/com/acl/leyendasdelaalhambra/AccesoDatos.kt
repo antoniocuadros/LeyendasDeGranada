@@ -1,6 +1,7 @@
 package com.acl.leyendasdelaalhambra
 
 import android.content.Context
+import org.json.JSONArray
 import java.io.InputStream
 import java.nio.channels.AsynchronousFileChannel.open
 
@@ -8,7 +9,7 @@ class AccesoDatos {
     lateinit var listaLeyendas:MutableList<Leyenda>;
     lateinit var recorridos:MutableList<Recorrido>
 
-    constructor(){
+    constructor(context: Context){
         listaLeyendas = mutableListOf(
                 Leyenda(1, "Leyenda del Patio de los Leones",
                         "Hace muchos años una Princesa llamada Zaira, viajó hasta Granada con su padre. Se alojaron en las dependencias de La Alhambra. Zaira se sentía muy sola ya que solo contaba con la compañía de su padre y un séquito de 11 hombre que velaban por su seguridad. Un día, la Princesa leyó el diario de su padre donde contaba que había matado a los verdaderos padres de Zaira cuando ella tenía 1 año.Al parecer, su madre había echado un maleficio al talismán y si la niña algún día se enteraba de la verdad, una maldición caería sobre el Rey.\n"
@@ -171,14 +172,12 @@ class AccesoDatos {
                 this.obtenerLeyendasRecorrido("POPULARES ALHAMBRA"))
         )
 
-        obtener_datos_json()
+        obtener_datos_json(context)
     }
 
     private fun obtener_datos_json(context: Context) {
         //Hay que leer el archivo JSON y parsearlo a un objeto leyenda
-        var archivo_json : String
 
-        val entradaStream: InputStream = context.assets.open("leyendas.json")
     }
 
 
