@@ -173,7 +173,7 @@ class AccesoDatos {
                 "https://i.imgur.com/dXP2uLL.jpg",
                 this.obtenerLeyendasRecorrido("POPULARES ALHAMBRA"))
         )
-        
+
     }
 
     private fun obtener_datos_leyendas_json(context: Context?): MutableList<Leyenda> {
