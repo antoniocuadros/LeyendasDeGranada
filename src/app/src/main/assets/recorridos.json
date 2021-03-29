@@ -17,18 +17,18 @@
   },
   {
     "id": "3",
-    "nombre": "Historias invasión francesa",
-    "descripcion": "Conjunto de historias/mitos/leyendas relacionadas con la invasión francesa",
-    "imagen": "https://i.imgur.com/twKhJvL.jpg",
-    "nombre_recorrido": "RECORRIDOFRANCESES",
-    "leyendas": []
-  },
-  {
-    "id": "4",
     "nombre": "Leyendas amorosas Granada",
     "descripcion": "Conjunto de historias/mitos/leyendas relacionadas con el amor en Granada",
     "imagen": "https://i.imgur.com/03M3bOW.jpg",
     "nombre_recorrido": "LEYENDASAMOROSAS",
+    "leyendas": []
+  },
+  {
+    "id": "4",
+    "nombre": "Leyendas Realejo",
+    "descripcion": "Conjunto de historias/mitos/leyendas relacionadas con el Realejo en Granada",
+    "imagen": "https://i.imgur.com/1jmPHDl.jpg",
+    "nombre_recorrido": "REALEJO",
     "leyendas": []
   }
 ]
