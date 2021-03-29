@@ -112,7 +112,10 @@
             </TextView>
 
             <androidx.viewpager2.widget.ViewPager2
-                android:layout_width="160dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_height="160dp"
                 android:id="@+id/viewpager_imagenes"
                 android:layout_gravity="center"
