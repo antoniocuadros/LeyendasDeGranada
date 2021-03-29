@@ -10,7 +10,8 @@
     "ubicacion": "Patio de los Leones",
     "orden": 6,
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
-    "imagenes_adicionales": ["https://i.imgur.com/jI0wzK6.jpg", "https://i.imgur.com/2T76lcu.jpg"]
+    "imagenes_adicionales": ["https://i.imgur.com/jI0wzK6.jpg", "https://i.imgur.com/2T76lcu.jpg"],
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/patio-de-los-leones"
   },
   {
     "id": "2",
@@ -23,7 +24,8 @@
     "ubicacion": "Puerta de la Justicia",
     "orden": 1,
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
-    "imagenes_adicionales": ["https://i.imgur.com/Aqm47DV.jpg", "https://i.imgur.com/xz48C00.jpg"]
+    "imagenes_adicionales": ["https://i.imgur.com/Aqm47DV.jpg", "https://i.imgur.com/xz48C00.jpg"],
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/puerta-de-la-justicia"
   },
   {
     "id": "3",
@@ -36,7 +38,8 @@
     "ubicacion": "Sala de los Abencerrajes",
     "orden": 2,
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
-    "imagenes_adicionales": ["https://i.imgur.com/M8mFaCM.jpg", "https://i.imgur.com/yRSvT84.jpg"]
+    "imagenes_adicionales": ["https://i.imgur.com/M8mFaCM.jpg", "https://i.imgur.com/yRSvT84.jpg"],
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/sala-de-los-abencerrajes"
   },
   {
     "id": "4",
@@ -49,7 +52,8 @@
     "ubicacion": "Silla del Moro",
     "orden": 5,
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": [],
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/silla-del-moro"
   },
   {
     "id": "5",
@@ -62,7 +66,8 @@
     "ubicacion": "Torre de la Cautiva",
     "orden": 6,
     "fuente": "https://www.elviajerofisgon.com/magazine/las-7-leyendas-la-alhambra-no-podras-olvidar/",
-    "imagenes_adicionales": ["https://i.imgur.com/MKAph6M.jpg", "https://i.imgur.com/qYgQiAH.jpg"]
+    "imagenes_adicionales": ["https://i.imgur.com/MKAph6M.jpg", "https://i.imgur.com/qYgQiAH.jpg"],
+    "sitio_web" : "https://www.alhambra-patronato.es/elemento-del-mes/torre-de-la-cautiva-4"
   },
   {
     "id": "6",
@@ -75,7 +80,8 @@
     "ubicacion": "Patio de la Sultana",
     "orden": 7,
     "fuente": "https://www.turgranada.es/fichas/cipres-del-patio-de-la-acequia-del-generalife-46922/",
-    "imagenes_adicionales": ["https://i.imgur.com/PJR3mBY.jpg"]
+    "imagenes_adicionales": ["https://i.imgur.com/PJR3mBY.jpg"],
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/patio-del-cipres-de-la-sultana"
   },
   {
     "id": "7",
@@ -88,7 +94,8 @@
     "ubicacion": "Torre de Vigilancia, Alcazaba",
     "orden": 1,
     "fuente": "https://granadapedia.wikanda.es/wiki/Leyenda_del_Soldado_Encantado",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": [],
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/alcazaba"
   },
   {
     "id": "8",
@@ -101,7 +108,8 @@
     "ubicacion": "Alhambra",
     "orden": "3",
     "fuente": "https://granadapedia.wikanda.es/wiki/La_Leyenda_sobre_el_nombre_%22Alhambra%22",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": [],
+    "sitio_web" : ""
   },
   {
     "id": "9",
@@ -114,7 +122,8 @@
     "ubicacion": "Mexuar",
     "orden": 4,
     "fuente": "https://www.revistaiberica.com/ocho-leyendas-de-la-alhambra/",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": [],
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/mexuar-oratorio"
   },
   {
     "id": "10",
@@ -127,7 +136,8 @@
     "ubicacion": "Torre de las Infantas",
     "orden": 3,
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
-    "imagenes_adicionales": ["https://i.imgur.com/6hGlWb3.jpg"]
+    "imagenes_adicionales": ["https://i.imgur.com/6hGlWb3.jpg"],
+    "sitio_web" : "https://www.alhambra-patronato.es/elemento-del-mes/torre-de-las-infantas"
   },
   {
     "id": "11",
@@ -140,7 +150,8 @@
     "ubicacion": "Generalife",
     "orden": 4,
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": [],
+    "sitio_web" : "http://www.generalife.org/"
   },
   {
     "id": "12",
@@ -153,6 +164,7 @@
     "ubicacion": "Torre de la vela",
     "orden": "2",
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
-    "imagenes_adicionales": []
+    "imagenes_adicionales": [],
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/torre-de-la-vela"
   }
 ]
