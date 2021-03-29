@@ -132,15 +132,15 @@
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
   },
   {
-  "id": "12",
-  "nombre": "Leyenda de la campana de la Vela",
-  "descripcion": "Según cuenta la tradición, la mujer soltera que toque la campana que se encuentra en la parte superior de la Torre de la Vela, la más alta de la torre, el dos de enero, día de la Toma de Granada, ese año encontrará marido y se casará.",
-  "imagen": "https://i.imgur.com/2qkHe33.jpg",
-  "Lat": 37.177025204856676,
-  "Long": -3.592285705487403,
-  "recorrido": "POPULARES ALHAMBRA",
-  "ubicacion": "Torre de la vela",
-  "orden": "2",
-  "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
+    "id": "12",
+    "nombre": "Leyenda de la campana de la Vela",
+    "descripcion": "Según cuenta la tradición, la mujer soltera que toque la campana que se encuentra en la parte superior de la Torre de la Vela, la más alta de la torre, el dos de enero, día de la Toma de Granada, ese año encontrará marido y se casará.",
+    "imagen": "https://i.imgur.com/2qkHe33.jpg",
+    "Lat": 37.177025204856676,
+    "Long": -3.592285705487403,
+    "recorrido": "POPULARES ALHAMBRA",
+    "ubicacion": "Torre de la vela",
+    "orden": "2",
+    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
   }
 ]

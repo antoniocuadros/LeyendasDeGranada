@@ -1,5 +1,9 @@
 package com.acl.leyendasdelaalhambra
 
+import android.content.Context
+import java.io.InputStream
+import java.nio.channels.AsynchronousFileChannel.open
+
 class AccesoDatos {
     lateinit var listaLeyendas:MutableList<Leyenda>;
     lateinit var recorridos:MutableList<Recorrido>
@@ -166,7 +170,17 @@ class AccesoDatos {
                 "https://i.imgur.com/dXP2uLL.jpg",
                 this.obtenerLeyendasRecorrido("POPULARES ALHAMBRA"))
         )
+
+        obtener_datos_json()
     }
+
+    private fun obtener_datos_json(context: Context) {
+        //Hay que leer el archivo JSON y parsearlo a un objeto leyenda
+        var archivo_json : String
+
+        val entradaStream: InputStream = context.assets.open("leyendas.json")
+    }
+
 
     public fun obtenerLeyendas():MutableList<Leyenda>{
         return listaLeyendas;
