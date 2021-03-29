@@ -9,7 +9,8 @@
     "recorrido": "POPULARES ALHAMBRA",
     "ubicacion": "Patio de los Leones",
     "orden": 6,
-    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
+    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
+    "imagenes_adicionales": []
   },
   {
     "id": "2",
@@ -21,7 +22,8 @@
     "recorrido": "POPULARES ALHAMBRA",
     "ubicacion": "Puerta de la Justicia",
     "orden": 1,
-    "fuente": "https://www.alhambra.info/leyendas-alhambra.html"
+    "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
+    "imagenes_adicionales": []
   },
   {
     "id": "3",
@@ -33,7 +35,8 @@
     "recorrido": "WASHINGTON IRVING",
     "ubicacion": "Sala de los Abencerrajes",
     "orden": 2,
-    "fuente": "https://www.alhambra.info/leyendas-alhambra.html"
+    "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
+    "imagenes_adicionales": []
   },
   {
     "id": "4",
@@ -45,7 +48,8 @@
     "recorrido": "WASHINGTON IRVING",
     "ubicacion": "Silla del Moro",
     "orden": 5,
-    "fuente": "https://www.alhambra.info/leyendas-alhambra.html"
+    "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
+    "imagenes_adicionales": []
   },
   {
     "id": "5",
@@ -57,7 +61,8 @@
     "recorrido": "POPULARES ALHAMBRA",
     "ubicacion": "Torre de la Cautiva",
     "orden": 6,
-    "fuente": "https://www.elviajerofisgon.com/magazine/las-7-leyendas-la-alhambra-no-podras-olvidar/"
+    "fuente": "https://www.elviajerofisgon.com/magazine/las-7-leyendas-la-alhambra-no-podras-olvidar/",
+    "imagenes_adicionales": []
   },
   {
     "id": "6",
@@ -69,7 +74,8 @@
     "recorrido": "POPULARES ALHAMBRA",
     "ubicacion": "Patio de la Sultana",
     "orden": 7,
-    "fuente": "https://www.turgranada.es/fichas/cipres-del-patio-de-la-acequia-del-generalife-46922/"
+    "fuente": "https://www.turgranada.es/fichas/cipres-del-patio-de-la-acequia-del-generalife-46922/",
+    "imagenes_adicionales": []
   },
   {
     "id": "7",
@@ -81,7 +87,8 @@
     "recorrido": "WASHINGTON IRVING",
     "ubicacion": "Torre de Vigilancia, Alcazaba",
     "orden": 1,
-    "fuente": "https://granadapedia.wikanda.es/wiki/Leyenda_del_Soldado_Encantado"
+    "fuente": "https://granadapedia.wikanda.es/wiki/Leyenda_del_Soldado_Encantado",
+    "imagenes_adicionales": []
   },
   {
     "id": "8",
@@ -93,7 +100,8 @@
     "recorrido": "POPULARES ALHAMBRA",
     "ubicacion": "Alhambra",
     "orden": "3",
-    "fuente": "https://granadapedia.wikanda.es/wiki/La_Leyenda_sobre_el_nombre_%22Alhambra%22"
+    "fuente": "https://granadapedia.wikanda.es/wiki/La_Leyenda_sobre_el_nombre_%22Alhambra%22",
+    "imagenes_adicionales": []
   },
   {
     "id": "9",
@@ -105,7 +113,8 @@
     "recorrido": "POPULARES ALHAMBRA",
     "ubicacion": "Mexuar",
     "orden": 4,
-    "fuente": "https://www.revistaiberica.com/ocho-leyendas-de-la-alhambra/"
+    "fuente": "https://www.revistaiberica.com/ocho-leyendas-de-la-alhambra/",
+    "imagenes_adicionales": []
   },
   {
     "id": "10",
@@ -117,7 +126,8 @@
     "recorrido": "WASHINGTON IRVING",
     "ubicacion": "Torre de las Infantas",
     "orden": 3,
-    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
+    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
+    "imagenes_adicionales": []
   },
   {
     "id": "11",
@@ -129,7 +139,8 @@
     "recorrido": "WASHINGTON IRVING",
     "ubicacion": "Generalife",
     "orden": 4,
-    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
+    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
+    "imagenes_adicionales": []
   },
   {
     "id": "12",
@@ -141,6 +152,7 @@
     "recorrido": "POPULARES ALHAMBRA",
     "ubicacion": "Torre de la vela",
     "orden": "2",
-    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/"
+    "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
+    "imagenes_adicionales": []
   }
 ]
