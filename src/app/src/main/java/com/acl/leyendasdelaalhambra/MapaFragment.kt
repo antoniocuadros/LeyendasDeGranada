@@ -88,6 +88,9 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
                 boton_todas.show()
 
+                //centramos la vista en el recorrido
+                centraMapa(recorrido.LatitudLongitud, recorrido.zoom)
+
             }
             else{//no venimos de los detalles
                 anadirMarcadoresLeyendas(leyendas)
