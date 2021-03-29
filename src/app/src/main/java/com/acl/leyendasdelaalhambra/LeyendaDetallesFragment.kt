@@ -58,12 +58,21 @@ class LeyendaDetallesFragment : Fragment() {
 
         //Slider de imágenes
         var imagen_list = leyenda.imagenes_adicionales
-        var viewpager_imagenes = view.findViewById<ViewPager2>(R.id.viewpager_imagenes)
 
+
+
+        var viewpager_imagenes = view.findViewById<ViewPager2>(R.id.viewpager_imagenes)
+        var indicador_pagina_imagen_slider = view.findViewById<CircleIndicator3>(R.id.indicador_slider)
+
+        //Si no hay imágenes no dejamos el hueco vacío, lo eliminamos
+        if(imagen_list.size == 0){
+            viewpager_imagenes.visibility = View.GONE
+            indicador_pagina_imagen_slider.visibility = View.GONE
+        }
         viewpager_imagenes.adapter = SliderImagenesAdapter(imagen_list)
         viewpager_imagenes.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        val indicador_pagina_imagen_slider = view.findViewById<CircleIndicator3>(R.id.indicador_slider)
+
         indicador_pagina_imagen_slider.setViewPager(viewpager_imagenes)
 
 
