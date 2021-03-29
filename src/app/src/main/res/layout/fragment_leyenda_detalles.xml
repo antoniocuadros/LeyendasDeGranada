@@ -128,7 +128,9 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:id="@+id/indicador_slider"
-                android:background="@color/BackgroudGreen"/>
+                android:background="@color/white"
+                app:ci_drawable="@drawable/esquinas_redondas"
+                />
 
             <Button
                 android:layout_width="160dp"
