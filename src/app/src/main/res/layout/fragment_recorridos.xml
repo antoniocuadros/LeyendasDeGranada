@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:id="@+id/cuadricula_leyendas"
         android:horizontalSpacing="10dp"
-        android:numColumns="auto_fit"
+        android:numColumns="1"
         android:verticalSpacing="10dp"
         >
     </GridView>
