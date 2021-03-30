@@ -60,19 +60,25 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         //Después de ejecutar lo anterior se pasa a ejecutar la función onMapReady
     }
 
-    //se llama cuando se cargue el mapa
+    //////////////////////////////////////////////////////
+    // Esta función es llamada cuando el mapa está listo
+    // para ser dibujado, en este punto asignamos un valor
+    // a la variable mapa y se siguen los siguientes pasos:
+    // -> Se activa la ubicación del usuario en tiempo real
+    // -> Se centra el mapa en granada
+    // -> Se añaden los marcadores según la función anadir_marcador_segun_origen
+    // -> Se define un listener para el botón flotante que mostrará todas las leyendas
+    //////////////////////////////////////////////////////
+
     override fun onMapReady(_mapa: GoogleMap) {
         mapa = _mapa;
 
-        val alhambra= LatLng(37.176406225511954, -3.5885636167711206)
+        val granada= LatLng(37.176406225511954, -3.5885636167711206)
         val accesoDatos = AccesoDatos(context)
         val leyendas = accesoDatos.obtenerLeyendas()
-        var polyline1: Polyline = mapa.addPolyline(PolylineOptions())
-
-
 
         activarUbicacionTiempoReal()
-        centraMapa(alhambra, 15.5F);
+        centraMapa(granada, 15.5F);
         anadir_marcador_segun_origen(leyendas)
 
         //Listener del floating button
@@ -80,7 +86,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
             mapa.clear()
             anadirMarcadoresLeyendas(leyendas)
             boton_todas.hide()
-            centraMapa(alhambra, 15.5F)
+            centraMapa(granada, 15.5F)
         }
 
         mapa.setOnInfoWindowClickListener(this)
