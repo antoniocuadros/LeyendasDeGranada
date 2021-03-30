@@ -18,10 +18,11 @@ Esta pantalla presenta un conjunto de recorridos, siendo un recorrido un conjunt
 La pantalla de descripción de una leyenda nos permite ver una imagen portada junto con el nombre de la leyenda así como la propia leyenda en sí, la fuente de donde ha sido recopilada, un conjunto de imágenes adicionales y botones para escuchar la leyenda en audio, ubicar la leyenda en el mapa y un último botón para obtener más información del sitio donde toma lugar la leyenda.
 
 ## Imágenes de la Aplicación
-
-<img src="/images/mapa.PNG" alt="drawing" width="200"/>
-<img src="/images/leyendas.PNG" alt="drawing" width="200"/>
-<img src="/images/recorridos.PNG" alt="drawing" width="200"/>
-<img src="/images/recorrido2.PNG" alt="drawing" width="200"/>
-<img src="/images/descripcion1.PNG" alt="drawing" width="200"/>
-<img src="/images/descripcion2.PNG" alt="drawing" width="200"/>
+<section style="display: flex; flex-direction: row; flex-wrap: wrap;">
+	<img src="/images/mapa.PNG" alt="drawing" width="200"/>
+	<img src="/images/leyendas.PNG" alt="drawing" width="200"/>
+	<img src="/images/recorridos.PNG" alt="drawing" width="200"/>
+	<img src="/images/recorrido2.PNG" alt="drawing" width="200"/>
+	<img src="/images/descripcion1.PNG" alt="drawing" width="200"/>
+	<img src="/images/descripcion2.PNG" alt="drawing" width="200"/>
+</section>
