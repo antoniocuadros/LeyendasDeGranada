@@ -140,7 +140,6 @@ class LeyendaDetallesFragment : Fragment() {
 
     override fun onPause() {
         super.onPause()
-        Toast.makeText(context, "Hola",Toast.LENGTH_SHORT).show()
 
         reproductor?.stop()
         reproductor?.reset()
