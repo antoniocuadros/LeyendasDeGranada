@@ -1,168 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PantallaInicio"
     android:background="@color/IconGreen"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-
     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PantallaInicio"
+        android:background="@color/IconGreen"
+        android:orientation="vertical"
+        >
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".LeyendaDetallesFragment"
+            android:layout_height="707dp"
             android:layout_margin="10dp"
+            android:elevation="100dp"
             android:padding="12dp"
             app:cardCornerRadius="20dp"
-            android:elevation="100dp"
-            >
+            tools:context=".LeyendaDetallesFragment">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:gravity="center"
                     android:text="@string/nombre_principal"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textSize="60dp"
-                    android:textStyle="bold"
-                    android:typeface="serif"
 
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    />
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/autor"
-                    android:gravity="center"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:gravity="center"
+                    android:text="@string/autor" />
 
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginTop="80dp"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:elevation="100dp"
-                app:cardCornerRadius="20dp"
-                android:id="@+id/mapa_carta"
-                android:backgroundTint="@color/IconGreen"
-                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/map_icon"
-                        android:backgroundTint="@color/BackgroudGreen"
-                        />
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Mapa"
-                        android:gravity="center"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        />
-                </LinearLayout>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mapa_carta"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="@color/IconGreen"
+                        android:elevation="100dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/map_icon"
+                                android:backgroundTint="@color/BackgroudGreen" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Mapa"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/recorrido_carta"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_margin="10dp"
-                        android:elevation="400dp"
-                        app:cardCornerRadius="20dp"
-                        android:id="@+id/recorrido_carta"
                         android:backgroundTint="@color/IconGreen"
-                        >
+                        android:elevation="400dp"
+                        app:cardCornerRadius="20dp">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:layout_gravity="center"
-                            >
+                            android:orientation="vertical">
+
                             <ImageView
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:layout_gravity="center"
                                 android:background="@drawable/recorridos_icon"
-                                android:backgroundTint="@color/BackgroudGreen"
-                                />
+                                android:backgroundTint="@color/BackgroudGreen" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Recorridos"
                                 android:gravity="center"
+                                android:text="Recorridos"
                                 android:textSize="20dp"
-                                android:textStyle="bold"
-                                />
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/leyendas_carta"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_margin="10dp"
-                    android:elevation="100dp"
                     android:layout_gravity="center"
-                    app:cardCornerRadius="20dp"
-                    android:id="@+id/leyendas_carta"
+                    android:layout_margin="10dp"
                     android:backgroundTint="@color/IconGreen"
-                    >
+                    android:elevation="100dp"
+                    app:cardCornerRadius="20dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_gravity="center"
-                        >
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
                             android:background="@drawable/lista_leyendas_icon"
-                            android:backgroundTint="@color/BackgroudGreen"
-                            />
+                            android:backgroundTint="@color/BackgroudGreen" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Leyendas"
                             android:gravity="center"
+                            android:text="Leyendas"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            />
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
