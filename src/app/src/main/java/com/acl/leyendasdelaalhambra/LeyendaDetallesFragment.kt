@@ -23,6 +23,7 @@ class LeyendaDetallesFragment : Fragment() {
     private val argumentos_recibidos_leyendas: LeyendaDetallesFragmentArgs by navArgs()
     private var reproductor: MediaPlayer? = null
     private var boton_sonido:ImageButton? = boton_play
+    private var boton_sonido_stop:ImageButton? = boton_stop
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +52,7 @@ class LeyendaDetallesFragment : Fragment() {
         val imagen_leyenda = view.findViewById<ImageView>(R.id.imagen_leyenda_detalles)
         val derechos = view.findViewById<TextView>(R.id.derechos_leyenda)
         boton_sonido = view.findViewById<ImageButton>(R.id.boton_play)
-
+        boton_sonido_stop = view.findViewById<ImageButton>(R.id.boton_stop)
 
         nombreText.text = leyenda.nombre
         descripcionText.text = leyenda.descripcion
@@ -89,17 +90,17 @@ class LeyendaDetallesFragment : Fragment() {
         //Boton reproducir sonido
         boton_sonido?.setOnClickListener{
 
-            if(reproductor != null && reproductor?.isPlaying!!){ //si está reproduciendo paramos
-                reproductor?.seekTo(0)
-                reproductor?.pause()
-                boton_sonido?.setImageResource(R.drawable.play)
-                reproductor?.reset()
-                reproductor?.release()
-                reproductor = null
-            }
-            else{ //si no estaba reproduciendo, empezamos
+            if(reproductor == null){
                 reproductor = MediaPlayer.create(context, resources.getIdentifier(leyenda.id_musica, "raw", context?.getPackageName()))
+            }
 
+            if(reproductor != null && reproductor?.isPlaying!!){ //Pausar
+                reproductor?.pause()
+
+                boton_sonido?.setImageResource(R.drawable.play)
+
+            }
+            else{ //Reanudar
                 reproductor?.setOnCompletionListener {
                     it.reset()
                     it.release()
@@ -107,12 +108,22 @@ class LeyendaDetallesFragment : Fragment() {
                 }
 
                 reproductor?.start()
-                boton_sonido?.setImageResource(R.drawable.stop)
+                boton_sonido?.setImageResource(R.drawable.pause)
+
+                boton_sonido_stop?.visibility = View.VISIBLE
             }
 
 
         }
 
+        //Boton Stop
+        boton_sonido_stop?.setOnClickListener{
+            reproductor?.reset()
+            reproductor?.release()
+            reproductor = null
+            boton_sonido_stop?.visibility = View.GONE
+            boton_sonido?.setImageResource(R.drawable.play)
+        }
 
 
         //Slider de imágenes

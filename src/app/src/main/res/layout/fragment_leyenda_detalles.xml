@@ -126,18 +126,44 @@
                 android:background="@color/white"
                 app:ci_drawable="@drawable/esquinas_redondas"
                 />
-            <ImageButton
-                android:id="@+id/boton_play"
-                android:layout_marginTop="10dp"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:src="@drawable/play"
-                android:background="@drawable/esquinas_redondas"
-                android:backgroundTint="@color/BackgroudGreen"
+                android:layout_margin="10dp"
                 >
-            </ImageButton>
+                <ImageButton
+                    android:id="@+id/boton_play"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:src="@drawable/play"
+                    android:background="@drawable/esquinas_redondas"
+                    android:backgroundTint="@color/BackgroudGreen"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+                </ImageButton>
+                <ImageButton
+                    android:id="@+id/boton_stop"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:src="@drawable/stop"
+                    android:background="@drawable/esquinas_redondas"
+                    android:backgroundTint="@color/BackgroudGreen"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    >
+                </ImageButton>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
