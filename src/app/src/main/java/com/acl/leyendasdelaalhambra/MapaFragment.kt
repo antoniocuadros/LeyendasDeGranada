@@ -35,6 +35,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     private lateinit var mapa: GoogleMap;
     private val argumentos_detalles:MapaFragmentArgs by navArgs()
     private lateinit var boton_todas:FloatingActionButton
+    private var recorrido_guardado: Recorrido? = null
 
 
 
@@ -106,10 +107,26 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
         //Listener del floating button
         boton_todas.setOnClickListener{
-            mapa.clear()
-            anadirMarcadoresLeyendas(leyendas)
-            boton_todas.hide()
-            centraMapa(granada, 15.5F)
+            if(argumentos_detalles.recorrido != null && recorrido_guardado == null){ //tenemos que mostrarlas todas
+                mapa.clear()
+                anadirMarcadoresLeyendas(leyendas)
+                centraMapa(granada, 15.5F)
+                recorrido_guardado = argumentos_detalles.recorrido!! //guardamos el recorrido por si lo quiere mostrar de nuevo
+            }
+            else{
+                if(recorrido_guardado != null){ //Tenemos un recorrido almacenado
+                    mapa.clear()
+                    anadirMarcadoresLeyendas(recorrido_guardado!!.leyendas)
+                    anade_polilinea(recorrido_guardado!!)
+                    recorrido_guardado = null
+                }
+                else{ //venimos de una leyenda en concreto
+                    mapa.clear()
+                    anadirMarcadoresLeyendas(leyendas)
+                    centraMapa(granada, 15.5F)
+                    boton_todas.hide()
+                }
+            }
         }
 
         mapa.setOnInfoWindowClickListener(this)
@@ -131,24 +148,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
                 //Mostramos los marcadores de las leyendas asociadas al recorrido
                 anadirMarcadoresLeyendas(recorrido.leyendas)
 
-                //Generamos las polilineas, para que no sea un caos se ha establecido un orden, vamos a ordenarlas.
-                val leyendas_ordenadas = recorrido.leyendas.sortedBy { it.orden }
-                var coordenadas:MutableList<LatLng> = mutableListOf()
-
-                for(leyend in leyendas_ordenadas) {
-                    coordenadas.add(LatLng(leyend.Lat, leyend.Long))
-                }
-
-                //centramos la vista en el recorrido
-                centraMapa(LatLng(recorrido.Latitud , recorrido.Longitud), recorrido.zoom)
-
-                //creamos la polilinea
-                var polyline2 = mapa.addPolyline(PolylineOptions()
-                        .clickable(true).color(R.color.Rojo)
-                        .addAll(
-                                coordenadas
-                        )
-                )
+                anade_polilinea(recorrido)
 
                 boton_todas.show()
             }
@@ -163,6 +163,30 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         }
     }
 
+    //////////////////////////////////////////////////////
+    // Dado un recorrido añade una polilínea que cubre
+    // en el orden definido los distintos lugares del mismo
+    //////////////////////////////////////////////////////
+    private fun anade_polilinea(recorrido:Recorrido){
+        //Generamos las polilineas, para que no sea un caos se ha establecido un orden, vamos a ordenarlas.
+        val leyendas_ordenadas = recorrido.leyendas.sortedBy { it.orden }
+        var coordenadas:MutableList<LatLng> = mutableListOf()
+
+        for(leyend in leyendas_ordenadas) {
+            coordenadas.add(LatLng(leyend.Lat, leyend.Long))
+        }
+
+        //centramos la vista en el recorrido
+        centraMapa(LatLng(recorrido.Latitud , recorrido.Longitud), recorrido.zoom)
+
+        //creamos la polilinea
+        var polyline2 = mapa.addPolyline(PolylineOptions()
+            .clickable(true).color(R.color.Rojo)
+            .addAll(
+                coordenadas
+            )
+        )
+    }
 
     //////////////////////////////////////////////////////
     // Mueve la cámara hacia unas determinadas coordenadas
