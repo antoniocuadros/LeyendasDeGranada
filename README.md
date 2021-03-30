@@ -19,8 +19,8 @@ La pantalla de descripción de una leyenda nos permite ver una imagen portada ju
 
 ## Imágenes de la Aplicación
 
-|           					|  									|
+
 |:-------------------------:    |:-------------------------:		|
-|![](/images/mapa.PNG)  		|    ![](/images/leyendas.PNG)
-|![](/images/recorridos.PNG)  	|    ![](/images/recorrido2.PNG)	|
-|![](/images/descripcion1.PNG)  |    ![](/images/descripcion2.PNG)	|
+|![](/images/mapa.PNG)  		|    ![](/images/leyendas.PNG | width=100) 		|
+|![](/images/recorridos.PNG | width=100)  	|    ![](/images/recorrido2.PNG | width=100)	|
+|![](/images/descripcion1.PNG | width=100)  |    ![](/images/descripcion2.PNG | width=100)	|
