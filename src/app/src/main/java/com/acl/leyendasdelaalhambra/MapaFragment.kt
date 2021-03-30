@@ -38,7 +38,11 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
     }
 
-
+    //////////////////////////////////////////////////////
+    // Se infla la vista de este fragmento y se llama
+    // a la función inicializaFragmento que genera el
+    // mapa de forma asíncrona
+    //////////////////////////////////////////////////////
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -53,12 +57,18 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         return vista;
     }
 
+
+    //////////////////////////////////////////////////////
+    // Esta función genera el mapa de forma asíncrona
+    // para posteriormente dar paso a la función onMapReady
+    //////////////////////////////////////////////////////
     private fun inicializaFragmento(){
         val vista_fragmento = childFragmentManager.findFragmentById(R.id.mapa_fragmento) as SupportMapFragment;
         //Genera el mapa de forma asíncrona
         vista_fragmento.getMapAsync(this);
         //Después de ejecutar lo anterior se pasa a ejecutar la función onMapReady
     }
+
 
     //////////////////////////////////////////////////////
     // Esta función es llamada cuando el mapa está listo
@@ -91,6 +101,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
         mapa.setOnInfoWindowClickListener(this)
     }
+
 
     //////////////////////////////////////////////////////
     // Esta función se llama cuando el mapa está listo para
@@ -139,46 +150,43 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         }
     }
 
+
+    //////////////////////////////////////////////////////
+    // Mueve la cámara hacia unas determinadas coordenadas
+    // y establece un zoom definidos por parámetros
+    //////////////////////////////////////////////////////
     private fun centraMapa(coords:LatLng, zoom:Float){
         mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(coords, zoom))
     }
 
+
+    //////////////////////////////////////////////////////
+    // Dada una leyenda pasada por parámetros crea
+    // un marcador y lo añade al mapa
+    //////////////////////////////////////////////////////
     private fun anadeMarcador(leyenda:Leyenda){
         val coordenadas = LatLng(leyenda.Lat,leyenda.Long);
         val marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)).snippet(leyenda.ubicacion))
         marcador.tag = leyenda
     }
 
+
+    //////////////////////////////////////////////////////
+    // Dada una lista de leyendas se añaden tantos marcadores
+    // como elementos haya en la lista llamando al método
+    // anadeMarcador para cada elemento
+    //////////////////////////////////////////////////////
     private fun anadirMarcadoresLeyendas(leyendas:MutableList<Leyenda>){
         for(leyenda in leyendas){
             anadeMarcador(leyenda)
         }
     }
 
-    private fun compruebaPermisos(context:Context){
-        //Desde android M necesitamos pedir explicitamente el permiso de ubicación
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
 
-
-            //El permiso de ubicación ya está otorgado
-            if(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
-                //OBTENEMOS LA UBICACIÓN
-            }
-            else{ //el permiso de ubicación no está otorgado
-                //pedimos el permiso, pasamos el permiso y un código cualquiera
-                requestPermissions(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 200)
-            }
-        }
-        else{ //inferior a android M, obtenemos la ubicación directamente
-            //OBTENEMOS LA UBICACIÓN
-        }
-    }
-
-    ///////////////////////////////////////////
-    //
-    //  PERMISOS Y UBICACIÓN EN TIEMPO REAL
-    //
-    ///////////////////////////////////////////
+    //////////////////////////////////////////////////////
+    // Este método se encarga de gestionar los permisos de
+    // ubicación y activar la ubicación en tiempo real
+    //////////////////////////////////////////////////////
     private fun activarUbicacionTiempoReal(){
         //Si entra en el if es porque ya ha aceptado los permisos
         if(ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
@@ -195,7 +203,10 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         }
     }
 
+
+    //////////////////////////////////////////////////////
     //Ahora tenemos que capturar la respuesta cuando el usuario acepte los permisos
+    //////////////////////////////////////////////////////
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         if(requestCode == 100){
             if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){  //Ha aceptado el permiso
@@ -206,6 +217,14 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         }
     }
 
+
+    //////////////////////////////////////////////////////
+    // Listener de la ventana de información de un marcador
+    // cuando hacemos click redirigimos el flujo de información
+    // al activity main y ella se encargará de gestionar
+    // el flujo de información hacía los detalles de una
+    // leyenda
+    //////////////////////////////////////////////////////
     override fun onInfoWindowClick(marcador: Marker?) {
         var leyenda = marcador?.tag as Leyenda
         (activity as MainActivity).onMarcadorSelected(leyenda)
