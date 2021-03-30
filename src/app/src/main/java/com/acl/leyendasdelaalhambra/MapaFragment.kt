@@ -25,6 +25,12 @@ import com.google.android.gms.maps.model.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
+    //////////////////////////////////////////////////////
+    // -> mapa: Objeto de tipo google map que contiene el mapa
+    // -> argumentos_detalles: argumentos que recibimos en el
+    //                         proceso de navegación entre fragments
+    // -> botón todas: botón flotante para mostrar todas las leyendas
+    //////////////////////////////////////////////////////
     private lateinit var mapa: GoogleMap;
     private val argumentos_detalles:MapaFragmentArgs by navArgs()
     private lateinit var boton_todas:FloatingActionButton
