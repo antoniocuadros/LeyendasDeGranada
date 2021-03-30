@@ -62,18 +62,39 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
     //se llama cuando se cargue el mapa
     override fun onMapReady(_mapa: GoogleMap) {
-        val alhambra= LatLng(37.176406225511954, -3.5885636167711206)
-
         mapa = _mapa;
-        activarUbicacionTiempoReal()
-        centraMapa(alhambra, 15.5F);
 
+        val alhambra= LatLng(37.176406225511954, -3.5885636167711206)
         val accesoDatos = AccesoDatos(context)
         val leyendas = accesoDatos.obtenerLeyendas()
         var polyline1: Polyline = mapa.addPolyline(PolylineOptions())
 
 
 
+        activarUbicacionTiempoReal()
+        centraMapa(alhambra, 15.5F);
+        anadir_marcador_segun_origen(leyendas)
+
+        //Listener del floating button
+        boton_todas.setOnClickListener{
+            mapa.clear()
+            anadirMarcadoresLeyendas(leyendas)
+            boton_todas.hide()
+            centraMapa(alhambra, 15.5F)
+        }
+
+        mapa.setOnInfoWindowClickListener(this)
+    }
+
+    //////////////////////////////////////////////////////
+    // Esta función se llama cuando el mapa está listo para
+    // añadir marcadores en función de que fragmento anterior
+    // vengamos. Si venimos de:
+    // -> Recorridos: Obtenemos el argumento recorrido y lo pintamos junto a una polilínea.
+    // -> Detalles: Mostramos únicamente la leyenda de la que se viene.
+    // -> Es la primera pantalla que tenemos, mostramos todas.
+    //////////////////////////////////////////////////////
+    private fun anadir_marcador_segun_origen(leyendas:MutableList<Leyenda>){
         if(argumentos_detalles.leyenda == null){
             if(argumentos_detalles.recorrido != null){ //venimos de recorridos
                 val recorrido:Recorrido = argumentos_detalles.recorrido!!
@@ -88,21 +109,18 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
                     coordenadas.add(LatLng(leyend.Lat, leyend.Long))
                 }
 
-
                 //centramos la vista en el recorrido
                 centraMapa(LatLng(recorrido.Latitud , recorrido.Longitud), recorrido.zoom)
 
                 //creamos la polilinea
-                polyline1= mapa.addPolyline(PolylineOptions()
+                var polyline2 = mapa.addPolyline(PolylineOptions()
                         .clickable(true).color(R.color.Rojo)
                         .addAll(
-                            coordenadas
+                                coordenadas
                         )
                 )
 
                 boton_todas.show()
-
-
             }
             else{//no venimos de los detalles
                 anadirMarcadoresLeyendas(leyendas)
@@ -111,21 +129,8 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         else{//venimos de la pestaña detalles
             anadeMarcador(argumentos_detalles.leyenda!!)
             centraMapa(LatLng(argumentos_detalles.leyenda!!.Lat, argumentos_detalles.leyenda!!.Long), 19F)
-
             boton_todas.show()
         }
-
-        //Listener del floating button
-        boton_todas.setOnClickListener{
-            anadirMarcadoresLeyendas(leyendas)
-            boton_todas.hide()
-            polyline1.remove()
-            //centramos de nuevo en la Alhambra
-            centraMapa(LatLng(37.1760783,-3.5881413), 15.5F)
-
-        }
-
-        mapa.setOnInfoWindowClickListener(this)
     }
 
     private fun centraMapa(coords:LatLng, zoom:Float){
