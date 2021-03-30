@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navegacion_leyendas"
-    app:startDestination="@id/icono_mapa">
+    app:startDestination="@id/pantallaInicio">
 
     <fragment
         android:id="@+id/icono_lista_leyendas"
@@ -57,4 +57,9 @@
             android:id="@+id/action_icono_recorridos_to_icono_mapa"
             app:destination="@id/icono_mapa" />
     </fragment>
+    <fragment
+        android:id="@+id/pantallaInicio"
+        android:name="com.acl.leyendasdelaalhambra.PantallaInicio"
+        android:label="fragment_pantalla_inicio"
+        tools:layout="@layout/fragment_pantalla_inicio" />
 </navigation>
