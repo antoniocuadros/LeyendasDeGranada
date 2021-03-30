@@ -6,11 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.GridView
+import androidx.activity.addCallback
 
 class RecorridosFragment : Fragment() {
     lateinit var adapter:RecorridoAdapter
     lateinit var recorridos:MutableList<Recorrido>
     lateinit var cuadricula:GridView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val callback = requireActivity().onBackPressedDispatcher.addCallback(this){
+            (activity as MainActivity).de_recorridos_a_leyendas()
+        }
+
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

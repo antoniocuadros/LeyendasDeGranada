@@ -60,4 +60,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    //Todas las navegaciones a leyendas
+    fun de_mapa_a_leyendas(){
+        findNavController(R.id.fragment2).navigate(MapaFragmentDirections.actionIconoMapaToIconoListaLeyendas())
+    }
+    fun de_recorridos_a_leyendas(){
+        findNavController(R.id.fragment2).navigate(RecorridosFragmentDirections.actionIconoRecorridosToIconoListaLeyendas())
+    }
+    fun de_detalles_a_leyendas(){
+        findNavController(R.id.fragment2).navigate(LeyendaDetallesFragmentDirections.actionLeyendaDetallesFragmentToIconoListaLeyendas())
+    }
 }

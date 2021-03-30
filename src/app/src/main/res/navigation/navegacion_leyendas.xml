@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_leyendaDetallesFragment_to_icono_mapa"
             app:destination="@id/icono_mapa" />
+        <action
+            android:id="@+id/action_leyendaDetallesFragment_to_icono_lista_leyendas"
+            app:destination="@id/icono_lista_leyendas" />
     </fragment>
     <fragment
         android:id="@+id/icono_mapa"
@@ -47,6 +50,9 @@
             app:nullable="true"
             android:defaultValue="@null"
             />
+        <action
+            android:id="@+id/action_icono_mapa_to_icono_lista_leyendas"
+            app:destination="@id/icono_lista_leyendas" />
     </fragment>
     <fragment
         android:id="@+id/icono_recorridos"
@@ -56,6 +62,9 @@
         <action
             android:id="@+id/action_icono_recorridos_to_icono_mapa"
             app:destination="@id/icono_mapa" />
+        <action
+            android:id="@+id/action_icono_recorridos_to_icono_lista_leyendas"
+            app:destination="@id/icono_lista_leyendas" />
     </fragment>
     <fragment
         android:id="@+id/pantallaInicio"

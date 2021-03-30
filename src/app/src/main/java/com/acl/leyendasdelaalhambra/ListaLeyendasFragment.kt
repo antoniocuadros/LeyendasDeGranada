@@ -6,11 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.GridView
+import androidx.activity.addCallback
 
 class ListaLeyendasFragment : Fragment() {
     lateinit var adapter:LeyendaAdapter
     lateinit var leyendas:MutableList<Leyenda>
     lateinit var cuadricula_leyendas: GridView
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val callback = requireActivity().onBackPressedDispatcher.addCallback(this){
+            System.exit(0)
+        }
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

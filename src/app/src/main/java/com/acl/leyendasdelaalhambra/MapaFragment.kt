@@ -42,7 +42,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         super.onCreate(savedInstanceState)
 
         val callback = requireActivity().onBackPressedDispatcher.addCallback(this){
-            System.exit(-1)
+            (activity as MainActivity).de_mapa_a_leyendas()
         }
 
     }
