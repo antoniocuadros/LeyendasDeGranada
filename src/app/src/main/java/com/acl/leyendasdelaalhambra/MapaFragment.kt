@@ -35,6 +35,8 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     private val argumentos_detalles:MapaFragmentArgs by navArgs()
     private lateinit var boton_todas:FloatingActionButton
 
+
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
