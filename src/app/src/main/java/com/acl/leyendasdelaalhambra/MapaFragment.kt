@@ -112,6 +112,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
                 anadirMarcadoresLeyendas(leyendas)
                 centraMapa(granada, 15.5F)
                 recorrido_guardado = argumentos_detalles.recorrido!! //guardamos el recorrido por si lo quiere mostrar de nuevo
+                boton_todas.setImageResource(R.drawable.recorridos_icon)
             }
             else{
                 if(recorrido_guardado != null){ //Tenemos un recorrido almacenado
@@ -119,6 +120,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
                     anadirMarcadoresLeyendas(recorrido_guardado!!.leyendas)
                     anade_polilinea(recorrido_guardado!!)
                     recorrido_guardado = null
+                    boton_todas.setImageResource(R.drawable.ojo)
                 }
                 else{ //venimos de una leyenda en concreto
                     mapa.clear()
