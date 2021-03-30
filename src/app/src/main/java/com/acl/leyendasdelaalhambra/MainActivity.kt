@@ -46,4 +46,18 @@ class MainActivity : AppCompatActivity() {
     fun onRecorridoSelected(recorrido: Recorrido) {
         findNavController(R.id.fragment2).navigate(RecorridosFragmentDirections.actionIconoRecorridosToIconoMapa(null, recorrido))
     }
+
+    fun desde_inicio_a(donde:String){
+        if(donde == "mapa"){
+            findNavController(R.id.fragment2).navigate(PantallaInicioDirections.actionPantallaInicioToIconoMapa())
+        }
+        else{
+            if(donde == "recorridos"){
+                findNavController(R.id.fragment2).navigate(PantallaInicioDirections.actionPantallaInicioToIconoRecorridos())
+            }
+            else{
+                findNavController(R.id.fragment2).navigate(PantallaInicioDirections.actionPantallaInicioToIconoListaLeyendas())
+            }
+        }
+    }
 }

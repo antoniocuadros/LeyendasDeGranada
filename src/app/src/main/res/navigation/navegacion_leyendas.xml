@@ -61,5 +61,15 @@
         android:id="@+id/pantallaInicio"
         android:name="com.acl.leyendasdelaalhambra.PantallaInicio"
         android:label="fragment_pantalla_inicio"
-        tools:layout="@layout/fragment_pantalla_inicio" />
+        tools:layout="@layout/fragment_pantalla_inicio" >
+        <action
+            android:id="@+id/action_pantallaInicio_to_icono_recorridos"
+            app:destination="@id/icono_recorridos" />
+        <action
+            android:id="@+id/action_pantallaInicio_to_icono_lista_leyendas"
+            app:destination="@id/icono_lista_leyendas" />
+        <action
+            android:id="@+id/action_pantallaInicio_to_icono_mapa"
+            app:destination="@id/icono_mapa" />
+    </fragment>
 </navigation>
