@@ -22,6 +22,7 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
@@ -36,7 +37,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     private lateinit var boton_todas:FloatingActionButton
 
 
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -59,6 +60,10 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
 
         //inicializamos el fragmento
         inicializaFragmento();
+
+        //Mostramos el menu inferior
+        var menu = requireActivity().findViewById<View>(R.id.menu_inferior)
+        menu.visibility = View.VISIBLE
 
         boton_todas = vista.findViewById<FloatingActionButton>(R.id.boton_flotante_todas)
 

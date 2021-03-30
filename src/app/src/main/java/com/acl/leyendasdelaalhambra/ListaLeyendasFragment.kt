@@ -18,6 +18,10 @@ class ListaLeyendasFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_lista_leyendas, container, false)
 
+        //Mostramos el menu inferior
+        var menu = requireActivity().findViewById<View>(R.id.menu_inferior)
+        menu.visibility = View.VISIBLE
+
         val acceso_datos = AccesoDatos(context)
         val leyendas = acceso_datos.obtenerLeyendas()
         cuadricula_leyendas = view.findViewById<GridView>(R.id.cuadricula_leyendas)

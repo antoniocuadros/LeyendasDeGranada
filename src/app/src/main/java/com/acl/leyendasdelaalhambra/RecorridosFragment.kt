@@ -18,6 +18,10 @@ class RecorridosFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_recorridos, container, false)
 
+        //Mostramos el menu inferior
+        var menu = requireActivity().findViewById<View>(R.id.menu_inferior)
+        menu.visibility = View.VISIBLE
+
         val acceso_datos = AccesoDatos(context)
         val recorridos = acceso_datos.obtenerRecorridos()
         cuadricula = view.findViewById<GridView>(R.id.cuadricula_leyendas)

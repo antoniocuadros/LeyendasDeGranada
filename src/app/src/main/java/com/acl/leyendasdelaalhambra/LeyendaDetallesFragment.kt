@@ -27,6 +27,10 @@ class LeyendaDetallesFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_leyenda_detalles, container, false)
 
+        //Mostramos el menu inferior
+        var menu = requireActivity().findViewById<View>(R.id.menu_inferior)
+        menu.visibility = View.VISIBLE
+
         val leyenda = argumentos_recibidos_leyendas.leyenda
 
         val nombreText = view.findViewById<TextView>(R.id.nombre_leyenda_detalles)
