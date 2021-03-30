@@ -1,15 +1,16 @@
 package com.acl.leyendasdelaalhambra
 
 import android.content.Intent
+import android.graphics.drawable.Icon
+import android.media.Image
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
@@ -20,6 +21,8 @@ import me.relex.circleindicator.CircleIndicator3
 
 class LeyendaDetallesFragment : Fragment() {
     private val argumentos_recibidos_leyendas: LeyendaDetallesFragmentArgs by navArgs()
+    private var reproductor: MediaPlayer? = null
+    private var boton_sonido:ImageButton? = boton_play
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +50,8 @@ class LeyendaDetallesFragment : Fragment() {
         val descripcionText = view.findViewById<TextView>(R.id.descripcion_leyenda_detalles)
         val imagen_leyenda = view.findViewById<ImageView>(R.id.imagen_leyenda_detalles)
         val derechos = view.findViewById<TextView>(R.id.derechos_leyenda)
+        boton_sonido = view.findViewById<ImageButton>(R.id.boton_play)
+
 
         nombreText.text = leyenda.nombre
         descripcionText.text = leyenda.descripcion
@@ -81,6 +86,35 @@ class LeyendaDetallesFragment : Fragment() {
             getActivity()?.startActivity(i)
         }
 
+        //Boton reproducir sonido
+        boton_sonido?.setOnClickListener{
+
+            if(reproductor != null && reproductor?.isPlaying!!){ //si está reproduciendo paramos
+                reproductor?.seekTo(0)
+                reproductor?.pause()
+                boton_sonido?.setImageResource(R.drawable.play)
+                reproductor?.reset()
+                reproductor?.release()
+                reproductor = null
+            }
+            else{ //si no estaba reproduciendo, empezamos
+                reproductor = MediaPlayer.create(context, resources.getIdentifier(leyenda.id_musica, "raw", context?.getPackageName()))
+
+                reproductor?.setOnCompletionListener {
+                    it.reset()
+                    it.release()
+                    boton_sonido?.setImageResource(R.drawable.play)
+                }
+
+                reproductor?.start()
+                boton_sonido?.setImageResource(R.drawable.stop)
+            }
+
+
+        }
+
+
+
         //Slider de imágenes
         var imagen_list = leyenda.imagenes_adicionales
 
@@ -102,6 +136,17 @@ class LeyendaDetallesFragment : Fragment() {
 
 
         return view
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Toast.makeText(context, "Hola",Toast.LENGTH_SHORT).show()
+
+        reproductor?.stop()
+        reproductor?.reset()
+        reproductor?.release()
+        reproductor = null
+        boton_sonido?.setImageResource(R.drawable.play)
     }
 
 }

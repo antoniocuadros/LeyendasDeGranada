@@ -11,7 +11,8 @@
     "orden": 6,
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": ["https://i.imgur.com/jI0wzK6.jpg", "https://i.imgur.com/2T76lcu.jpg"],
-    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/patio-de-los-leones"
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/patio-de-los-leones",
+    "id_musica": "patioleones"
   },
   {
     "id": "2",
@@ -25,7 +26,8 @@
     "orden": 1,
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
     "imagenes_adicionales": ["https://i.imgur.com/Aqm47DV.jpg", "https://i.imgur.com/xz48C00.jpg"],
-    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/puerta-de-la-justicia"
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/puerta-de-la-justicia",
+    "id_musica": "puertajusticia"
   },
   {
     "id": "3",
@@ -39,7 +41,8 @@
     "orden": 2,
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
     "imagenes_adicionales": ["https://i.imgur.com/M8mFaCM.jpg", "https://i.imgur.com/yRSvT84.jpg"],
-    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/sala-de-los-abencerrajes"
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/sala-de-los-abencerrajes",
+    "id_musica": ""
   },
   {
     "id": "4",
@@ -53,7 +56,8 @@
     "orden": 5,
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/silla-del-moro"
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/silla-del-moro",
+    "id_musica": "sillamoro"
   },
   {
     "id": "5",
@@ -67,7 +71,8 @@
     "orden": 6,
     "fuente": "https://www.elviajerofisgon.com/magazine/las-7-leyendas-la-alhambra-no-podras-olvidar/",
     "imagenes_adicionales": ["https://i.imgur.com/MKAph6M.jpg", "https://i.imgur.com/qYgQiAH.jpg"],
-    "sitio_web" : "https://www.alhambra-patronato.es/elemento-del-mes/torre-de-la-cautiva-4"
+    "sitio_web" : "https://www.alhambra-patronato.es/elemento-del-mes/torre-de-la-cautiva-4",
+    "id_musica": "cautiva"
   },
   {
     "id": "6",
@@ -81,7 +86,8 @@
     "orden": 7,
     "fuente": "https://www.turgranada.es/fichas/cipres-del-patio-de-la-acequia-del-generalife-46922/",
     "imagenes_adicionales": ["https://i.imgur.com/PJR3mBY.jpg"],
-    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/patio-del-cipres-de-la-sultana"
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/patio-del-cipres-de-la-sultana",
+    "id_musica": "cipres"
   },
   {
     "id": "7",
@@ -95,7 +101,8 @@
     "orden": 1,
     "fuente": "https://granadapedia.wikanda.es/wiki/Leyenda_del_Soldado_Encantado",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/alcazaba"
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/alcazaba",
+    "id_musica": "soldadoencantado"
   },
   {
     "id": "8",
@@ -109,7 +116,8 @@
     "orden": "3",
     "fuente": "https://granadapedia.wikanda.es/wiki/La_Leyenda_sobre_el_nombre_%22Alhambra%22",
     "imagenes_adicionales": [],
-    "sitio_web" : ""
+    "sitio_web" : "",
+    "id_musica": "rojoalhambra"
   },
   {
     "id": "9",
@@ -123,7 +131,8 @@
     "orden": 4,
     "fuente": "https://www.revistaiberica.com/ocho-leyendas-de-la-alhambra/",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/mexuar-oratorio"
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/mexuar-oratorio",
+    "id_musica": "azulejos"
   },
   {
     "id": "10",
@@ -137,7 +146,8 @@
     "orden": 3,
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": ["https://i.imgur.com/6hGlWb3.jpg"],
-    "sitio_web" : "https://www.alhambra-patronato.es/elemento-del-mes/torre-de-las-infantas"
+    "sitio_web" : "https://www.alhambra-patronato.es/elemento-del-mes/torre-de-las-infantas",
+    "id_musica": "infantas"
   },
   {
     "id": "11",
@@ -151,7 +161,8 @@
     "orden": 4,
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": [],
-    "sitio_web" : "http://www.generalife.org/"
+    "sitio_web" : "http://www.generalife.org/",
+    "id_musica": "ahmed"
   },
   {
     "id": "12",
@@ -165,7 +176,8 @@
     "orden": "2",
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/torre-de-la-vela"
+    "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/torre-de-la-vela",
+    "id_musica": "torrevela"
   },
   {
     "id": "13",
@@ -179,7 +191,8 @@
     "orden": "1",
     "fuente": "https://nuevatribuna.publico.es/articulo/historia/hombre-alhambra-historia-granada/20180727095930154276.amp.html",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://www.alhambradegranada.org/es/info/palaciodecarlosvyalrededores/plazadelosaljibes.asp"
+    "sitio_web" : "https://www.alhambradegranada.org/es/info/palaciodecarlosvyalrededores/plazadelosaljibes.asp",
+    "id_musica": "polvora"
   },
   {
     "id": "14",
@@ -193,7 +206,8 @@
     "orden": "4",
     "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://www.archidiocesisgranada.es/index.php/patrimonio-cultural/abadia-del-sacromonte"
+    "sitio_web" : "https://www.archidiocesisgranada.es/index.php/patrimonio-cultural/abadia-del-sacromonte",
+    "id_musica": "piedrassacromonte"
   },
   {
     "id": "15",
@@ -207,7 +221,8 @@
     "orden": "2",
     "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://rinconesdegranada.com/casa-de-castril"
+    "sitio_web" : "https://rinconesdegranada.com/casa-de-castril",
+    "id_musica": "tapia"
   },
   {
     "id": "16",
@@ -221,7 +236,8 @@
     "orden": "3",
     "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://www.andalucia.org/es/granada-turismo-cultural-palacio-de-los-cordova"
+    "sitio_web" : "https://www.andalucia.org/es/granada-turismo-cultural-palacio-de-los-cordova",
+    "id_musica": "fuentecordova"
   },
   {
     "id": "17",
@@ -235,7 +251,8 @@
     "orden": "1",
     "fuente": "https://granada.andalify.com/blog/2020/06/29/mitos-y-leyendas-de-granada/",
     "imagenes_adicionales": [],
-    "sitio_web" : "https://rinconesdegranada.com/calle-del-beso"
+    "sitio_web" : "https://rinconesdegranada.com/calle-del-beso",
+    "id_musica": "callebeso"
   },
   {
     "id": "18",
@@ -249,7 +266,8 @@
     "orden": "1",
     "fuente": "https://www.visitargranada.com/blog/leyendas-del-realejo/",
     "imagenes_adicionales": [],
-    "sitio_web" : ""
+    "sitio_web" : "",
+    "id_musica": "fuenterealejo"
   },
   {
     "id": "19",
@@ -263,7 +281,8 @@
     "orden": "2",
     "fuente": "https://www.visitargranada.com/blog/leyendas-del-realejo/",
     "imagenes_adicionales": [],
-    "sitio_web" : ""
+    "sitio_web" : "",
+    "id_musica": "principe"
   },
   {
     "id": "20",
@@ -277,6 +296,7 @@
     "orden": "1",
     "fuente": "https://www.hostelnut.com/3-leyendas-urbanas-de-granada-que-quiza-no-conozcas/",
     "imagenes_adicionales": [],
-    "sitio_web" : ""
+    "sitio_web" : "",
+    "id_musica": "cuevas"
   }
 ]
