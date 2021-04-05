@@ -16,4 +16,8 @@
         android:id="@+id/icono_lista_leyendas"
         android:icon="@drawable/lista_leyendas_icon"
         android:title="@string/leyendas"/>
+    <item
+        android:id="@+id/icono_ajustes"
+        android:icon="@drawable/ajustes_icon"
+        android:title="@string/ajustes"/>
 </menu>
