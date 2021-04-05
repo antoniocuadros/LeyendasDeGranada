@@ -85,7 +85,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Mapa"
+                                android:text="@string/mapa"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -118,7 +118,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Recorridos"
+                                android:text="@string/recorridos"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -152,7 +152,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Leyendas"
+                            android:text="@string/leyendas"
                             android:textSize="20dp"
                             android:textStyle="bold" />
                     </LinearLayout>

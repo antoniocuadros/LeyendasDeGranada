@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">LeyendasDeGranada</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="mostrar_todas">Mostrar todas</string>
     <string name="nombre_principal">Leyendas de Granada</string>
-    <string name="autor">By Antonio Cuadros Lapresta</string>
+    <string name="autor">Por Antonio Cuadros Lapresta</string>
+    <string name="mapa">Mapa</string>
+    <string name="recorridos">Recorridos</string>
+    <string name="leyendas">Leyendas</string>
 </resources>

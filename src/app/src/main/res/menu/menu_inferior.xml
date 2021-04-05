@@ -3,17 +3,17 @@
     <item
         android:id="@+id/icono_mapa"
         android:icon="@drawable/map_icon"
-        android:title="Mapa"
+        android:title="@string/mapa"
         android:color="@color/black" android:state_checked="true"
         />
 
     <item
         android:id="@+id/icono_recorridos"
         android:icon="@drawable/recorridos_icon"
-        android:title="Recorridos"/>
+        android:title="@string/recorridos"/>
 
     <item
         android:id="@+id/icono_lista_leyendas"
         android:icon="@drawable/lista_leyendas_icon"
-        android:title="Leyendas"/>
+        android:title="@string/leyendas"/>
 </menu>
