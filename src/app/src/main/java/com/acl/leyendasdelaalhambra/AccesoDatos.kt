@@ -44,7 +44,12 @@ class AccesoDatos {
         //Hay que leer el archivo JSON y parsearlo a un objeto recorrido
         //Extraemos en string el Json
         val recorridos_texto:String
-        val inputStream:InputStream = context?.assets!!.open("recorridos.json")
+
+        var inputStream:InputStream = context?.assets!!.open("tours.json")
+        if(Locale.getDefault().getLanguage() == "es"){
+            inputStream = context?.assets!!.open("recorridos.json")
+        }
+
 
         recorridos_texto = inputStream.bufferedReader().use{it.readText()}
 
