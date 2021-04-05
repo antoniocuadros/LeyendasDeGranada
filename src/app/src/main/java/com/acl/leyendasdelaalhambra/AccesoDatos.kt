@@ -86,3 +86,12 @@ class AccesoDatos {
         return a_devolver;
     }
 }
+
+//Singleton, de esta forma solo se leen una vez los datos
+private lateinit var instancia_datos:AccesoDatos
+public fun obtenerAccesoDatos(context:Context):AccesoDatos{
+    if(!::instancia_datos.isInitialized){
+        instancia_datos = AccesoDatos(context)
+    }
+    return instancia_datos
+}
