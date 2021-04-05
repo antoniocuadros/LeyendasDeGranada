@@ -1,9 +1,11 @@
 package com.acl.leyendasdelaalhambra
 
 import android.content.Context
+import android.widget.Toast
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.InputStream
+import java.util.*
 
 class AccesoDatos {
     lateinit var listaLeyendas:MutableList<Leyenda>;
@@ -18,7 +20,12 @@ class AccesoDatos {
         //Hay que leer el archivo JSON y parsearlo a un objeto leyenda
         //Extraemos en string el Json
         val leyendas_texto:String
-        val inputStream:InputStream = context?.assets!!.open("leyendas.json")
+
+        var inputStream:InputStream = context?.assets!!.open("leyends.json")
+        if(Locale.getDefault().getLanguage() == "es"){
+            inputStream = context?.assets!!.open("leyendas.json")
+        }
+
 
         leyendas_texto = inputStream.bufferedReader().use{it.readText()}
 
