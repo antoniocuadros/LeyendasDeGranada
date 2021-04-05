@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.recorrido_item.view.*
+import java.util.*
 
 class RecorridoAdapter(var listaRecorridos:MutableList<Recorrido>): BaseAdapter(){
 
@@ -26,7 +27,13 @@ class RecorridoAdapter(var listaRecorridos:MutableList<Recorrido>): BaseAdapter(
         imagen_recorrido.setImageResource(R.drawable.leones)
         Glide.with(vista).load(recorrido.imagen).into(imagen_recorrido);
         texto_recorrido.text = recorrido.nombre
-        texto_paradas.text = "Paradas: " + recorrido.leyendas.size
+        if(Locale.getDefault().getLanguage() == "es") {
+            texto_paradas.text = "Paradas: " + recorrido.leyendas.size
+        }
+        else{
+            texto_paradas.text = "Points of interest: " + recorrido.leyendas.size
+        }
+
 
         return vista
     }

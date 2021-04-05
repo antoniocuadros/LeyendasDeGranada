@@ -10,4 +10,5 @@
     <string name="localizacion">"Location "</string>
     <string name="fuente">Source:</string>
     <string name="infositio">"Site Information "</string>
+    <string name="paradas">Points of interest:</string>
 </resources>

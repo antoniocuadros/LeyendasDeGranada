@@ -61,7 +61,7 @@ app:cardElevation="5dp"
         android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/black"
-        android:textSize="10dp"
+        android:textSize="12dp"
         android:layout_margin="10dp"
         />
 
