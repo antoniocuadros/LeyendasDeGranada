@@ -33,34 +33,31 @@ class ajustesFragment : Fragment() {
         checkCurrentLanguage()
 
         botoningles.setOnClickListener{
-            var locale = Locale("en")
-            val configuracion = Configuration()
-            configuracion.setLocale(locale)
-
-            Locale.setDefault(locale)
-            context?.createConfigurationContext(configuracion)
-            getActivity()?.recreate()
-            resources.updateConfiguration(configuracion, resources.getDisplayMetrics());
+            changeLocale("en")
         }
 
         botonespanol.setOnClickListener{
-            var locale = Locale("es")
-            val configuracion = Configuration()
-            configuracion.setLocale(Locale("es"))
-
-            Locale.setDefault(locale)
-            context?.createConfigurationContext(configuracion)
-            getActivity()?.recreate()
-
-            val resources: Resources = requireContext().resources
-            resources.updateConfiguration(configuracion, resources.getDisplayMetrics());
+            changeLocale("es")
         }
 
 
         return view
     }
 
-    fun checkCurrentLanguage(){
+    private fun changeLocale(id:String){
+        var locale = Locale(id)
+        val configuracion = Configuration()
+        configuracion.setLocale(Locale(id))
+
+        Locale.setDefault(locale)
+        context?.createConfigurationContext(configuracion)
+        getActivity()?.recreate()
+
+        val resources: Resources = requireContext().resources
+        resources.updateConfiguration(configuracion, resources.getDisplayMetrics());
+    }
+
+    private fun checkCurrentLanguage(){
         if(Locale.getDefault().getLanguage() == "es"){
             botonespanol.isChecked = true
         }
