@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LeyendasDeGranada</string>
+    <string name="mostrar_todas">Show All</string>
+    <string name="mapa">Map</string>
+    <string name="recorridos">"Tours "</string>
+    <string name="leyendas">Leyends</string>
+    <string name="nombre_principal">Leyends of Granada</string>
+    <string name="autor">By Antonio Cuadros Lapresta</string>
+</resources>
