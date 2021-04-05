@@ -2,7 +2,7 @@
   {
     "id": "1",
     "nombre": "Court of the lions",
-    "descripcion": "Many years ago a Princess named Zaira traveled to Granada with her father. They stayed in the premises of the Alhambra. Ella zaira she felt very lonely since she only had the company of her father and an entourage of 11 men who watched over her safety. One day, the Princess read her father's diary where she said that she had killed Zaira's real parents when she was 1 year old, apparently her mother had cast a spell on the talisman and if the girl ever found out the truth , a curse would fall on the King.\n\nIn the courtyard where the Patio de Los Leones is now located, the young woman asked her father if what she had read was true, her father affirmed it and the legend tells that the talisman was activated and her father with the 11 men became in 12 stone lions, those that today crown the Patio de los Leones. ",
+    "descripcion": "Many years ago a Princess named Zaira traveled to Granada with her father. They stayed in the premises of the Alhambra. Zaira  felt very lonely since she only had the company of her father and an entourage of 11 men who watched over her safety. One day, the Princess read her father's diary where she said that she had killed Zaira's real parents when she was 1 year old, apparently her mother had cast a spell on the talisman and if the girl ever found out the truth , a curse would fall on the King.\n\nIn the courtyard where the Patio de Los Leones is now located, the young woman asked her father if what she had read was true, her father affirmed it and the legend tells that the talisman was activated and her father with the 11 men became in 12 stone lions, those that today crown the Patio de los Leones. ",
     "imagen": "https://i.imgur.com/ABQw1si.jpg",
     "Lat": 37.17710111654708,
     "Long": -3.589237144374555,
@@ -12,7 +12,7 @@
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": ["https://i.imgur.com/jI0wzK6.jpg", "https://i.imgur.com/2T76lcu.jpg"],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/patio-de-los-leones",
-    "id_musica": "patioleones"
+    "id_musica": "patioleonesen"
   },
   {
     "id": "2",
@@ -27,12 +27,12 @@
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
     "imagenes_adicionales": ["https://i.imgur.com/Aqm47DV.jpg", "https://i.imgur.com/xz48C00.jpg"],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/puerta-de-la-justicia",
-    "id_musica": "puertajusticia"
+    "id_musica": "puertajusticiaen"
   },
   {
     "id": "3",
     "nombre": "Hall of the Abencerrajes",
-    "descripcion": "The name of Abencerrajes comes from the surname of a family of the nobility of the time, who had their homes inside the Alhambra. \n\n Legend has it that this family had as a political rival another called Zenetes, who decided to destroy their opponents through a conspiracy ... Thus, they invented a love affair between the sultana and one of the Abencerrages, in order to wake up. jealousy and anger in the sultan ... The sultan, blinded by consternation, and on the occasion of a feast in the room bearing the family name, had the 37 knights bearing the name of Abencerrajes. \n\n It is said that the reddish color that even today can be seen in the bowl of the fountain, and in the channel that carries its water to the fountain of the Patio de los Leones, is due to the stains of the blood of the murdered knights ... ",
+    "descripcion": "The name of Abencerrajes comes from the surname of a family of the nobility of the time, who had their homes inside the Alhambra. \n\n Legend has it that this family had as a political rival another called Zenetes, who decided to destroy their opponents through a conspiracy ... Thus, they invented a love affair between the sultana and one of the Abencerrages, in order to wake up jealousy and anger in the sultan ... The sultan, blinded by consternation, and on the occasion of a feast in the room bearing the family name, had the 37 knights bearing the name of Abencerrajes. \n\n It is said that the reddish color that even today can be seen in the bowl of the fountain, and in the channel that carries its water to the fountain of the Patio de los Leones, is due to the stains of the blood of the murdered knights ... ",
     "imagen": "https://i.imgur.com/X31ERYJ.jpg",
     "Lat": 37.17695623969098,
     "Long": -3.5892068886337682,
@@ -42,7 +42,7 @@
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
     "imagenes_adicionales": ["https://i.imgur.com/M8mFaCM.jpg", "https://i.imgur.com/yRSvT84.jpg"],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/sala-de-los-abencerrajes",
-    "id_musica": "abencerrajes"
+    "id_musica": "abencerrajesen"
   },
   {
     "id": "4",
@@ -57,7 +57,7 @@
     "fuente": "https://www.alhambra.info/leyendas-alhambra.html",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/silla-del-moro",
-    "id_musica": "sillamoro"
+    "id_musica": "sillamoroen"
   },
   {
     "id": "5",
@@ -72,7 +72,7 @@
     "fuente": "https://www.elviajerofisgon.com/magazine/las-7-leyendas-la-alhambra-no-podras-olvidar/",
     "imagenes_adicionales": ["https://i.imgur.com/MKAph6M.jpg", "https://i.imgur.com/qYgQiAH.jpg"],
     "sitio_web" : "https://www.alhambra-patronato.es/elemento-del-mes/torre-de-la-cautiva-4",
-    "id_musica": "cautiva"
+    "id_musica": "cautivaen"
   },
   {
     "id": "6",
@@ -87,7 +87,7 @@
     "fuente": "https://www.turgranada.es/fichas/cipres-del-patio-de-la-acequia-del-generalife-46922/",
     "imagenes_adicionales": ["https://i.imgur.com/PJR3mBY.jpg"],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/patio-del-cipres-de-la-sultana",
-    "id_musica": "cipres"
+    "id_musica": "cipresen"
   },
   {
     "id": "7",
@@ -102,7 +102,7 @@
     "fuente": "https://granadapedia.wikanda.es/wiki/Leyenda_del_Soldado_Encantado",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/alcazaba",
-    "id_musica": "soldadoencantado"
+    "id_musica": "soldadoencantadoen"
   },
   {
     "id": "8",
@@ -117,7 +117,7 @@
     "fuente": "https://granadapedia.wikanda.es/wiki/La_Leyenda_sobre_el_nombre_%22Alhambra%22",
     "imagenes_adicionales": [],
     "sitio_web" : "",
-    "id_musica": "rojoalhambra"
+    "id_musica": "rojoalhambraen"
   },
   {
     "id": "9",
@@ -132,7 +132,7 @@
     "fuente": "https://www.revistaiberica.com/ocho-leyendas-de-la-alhambra/",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/mexuar-oratorio",
-    "id_musica": "azulejos"
+    "id_musica": "azulejosen"
   },
   {
     "id": "10",
@@ -147,7 +147,7 @@
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": ["https://i.imgur.com/6hGlWb3.jpg"],
     "sitio_web" : "https://www.alhambra-patronato.es/elemento-del-mes/torre-de-las-infantas",
-    "id_musica": "infantas"
+    "id_musica": "infantasen"
   },
   {
     "id": "11",
@@ -162,7 +162,7 @@
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": [],
     "sitio_web" : "http://www.generalife.org/",
-    "id_musica": "ahmed"
+    "id_musica": "ahmeden"
   },
   {
     "id": "12",
@@ -177,7 +177,7 @@
     "fuente": "https://www.civitatis.com/blog/leyendas-de-la-alhambra-de-granada/",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.alhambra-patronato.es/edificios-lugares/torre-de-la-vela",
-    "id_musica": "torrevela"
+    "id_musica": "torrevelaen"
   },
   {
     "id": "13",
@@ -192,7 +192,7 @@
     "fuente": "https://nuevatribuna.publico.es/articulo/historia/hombre-alhambra-historia-granada/20180727095930154276.amp.html",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.alhambradegranada.org/es/info/palaciodecarlosvyalrededores/plazadelosaljibes.asp",
-    "id_musica": "polvora"
+    "id_musica": "polvoraen"
   },
   {
     "id": "14",
@@ -207,7 +207,7 @@
     "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.archidiocesisgranada.es/index.php/patrimonio-cultural/abadia-del-sacromonte",
-    "id_musica": "piedrassacromonte"
+    "id_musica": "piedrassacromonteen"
   },
   {
     "id": "15",
@@ -222,7 +222,7 @@
     "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
     "imagenes_adicionales": [],
     "sitio_web" : "https://rinconesdegranada.com/casa-de-castril",
-    "id_musica": "tapia"
+    "id_musica": "tapiaen"
   },
   {
     "id": "16",
@@ -237,7 +237,7 @@
     "fuente": "http://www.granadatur.com/page/189-leyendas-de-amor-en-granada/",
     "imagenes_adicionales": [],
     "sitio_web" : "https://www.andalucia.org/es/granada-turismo-cultural-palacio-de-los-cordova",
-    "id_musica": "fuentecordova"
+    "id_musica": "fuentecordovaen"
   },
   {
     "id": "17",
@@ -252,7 +252,7 @@
     "fuente": "https://granada.andalify.com/blog/2020/06/29/mitos-y-leyendas-de-granada/",
     "imagenes_adicionales": [],
     "sitio_web" : "https://rinconesdegranada.com/calle-del-beso",
-    "id_musica": "callebeso"
+    "id_musica": "callebesoen"
   },
   {
     "id": "18",
@@ -267,7 +267,7 @@
     "fuente": "https://www.visitargranada.com/blog/leyendas-del-realejo/",
     "imagenes_adicionales": [],
     "sitio_web" : "",
-    "id_musica": "fuenterealejo"
+    "id_musica": "fuenterealejoen"
   },
   {
     "id": "19",
@@ -282,7 +282,7 @@
     "fuente": "https://www.visitargranada.com/blog/leyendas-del-realejo/",
     "imagenes_adicionales": [],
     "sitio_web" : "",
-    "id_musica": "principe"
+    "id_musica": "principeen"
   },
   {
     "id": "20",
@@ -297,6 +297,6 @@
     "fuente": "https://www.hostelnut.com/3-leyendas-urbanas-de-granada-que-quiza-no-conozcas/",
     "imagenes_adicionales": [],
     "sitio_web" : "",
-    "id_musica": "cuevas"
+    "id_musica": "cuevasen"
   }
 ]
