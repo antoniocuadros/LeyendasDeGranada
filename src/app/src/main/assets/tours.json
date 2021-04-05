@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "nombre": "Alhambra legends: WASHINGTON IRVING",
+    "nombre": "Alhambra Legends: Washington Irving",
     "descripcion": "Set of legends of the Alhambra",
     "imagen": "https://i.imgur.com/q7WAIXz.jpg",
     "nombre_recorrido": "WASHINGTON IRVING",
@@ -12,7 +12,7 @@
   },
   {
     "id": "2",
-    "nombre": "Alhambra popular origin legends",
+    "nombre": "Alhambra Popular Origin Legends",
     "descripcion": "Set of legends of the Alhambra",
     "imagen": "https://i.imgur.com/dXP2uLL.jpg",
     "nombre_recorrido": "POPULARES ALHAMBRA",
@@ -23,7 +23,7 @@
   },
   {
     "id": "3",
-    "nombre": "Granada love legends",
+    "nombre": "Granada Love Legends",
     "descripcion": "Set of stories/myths/legends related to love in Granada ",
     "imagen": "https://i.imgur.com/03M3bOW.jpg",
     "nombre_recorrido": "LEYENDASAMOROSAS",
