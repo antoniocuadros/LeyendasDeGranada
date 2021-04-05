@@ -7,4 +7,7 @@
     <string name="leyendas">Leyends</string>
     <string name="nombre_principal">Leyends of Granada</string>
     <string name="autor">By Antonio Cuadros Lapresta</string>
+    <string name="localizacion">"Location "</string>
+    <string name="fuente">Source:</string>
+    <string name="infositio">"Site Information "</string>
 </resources>

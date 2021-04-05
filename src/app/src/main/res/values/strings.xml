@@ -7,4 +7,7 @@
     <string name="mapa">Mapa</string>
     <string name="recorridos">Recorridos</string>
     <string name="leyendas">Leyendas</string>
+    <string name="localizacion">Localización</string>
+    <string name="fuente">Fuente:</string>
+    <string name="infositio">Información Sitio</string>
 </resources>

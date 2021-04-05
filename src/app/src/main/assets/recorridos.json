@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "nombre": "Leyendas Alhambra WASHINGTON IRVING",
+    "nombre": "Leyendas Alhambra Washington Irving",
     "descripcion": "Conjunto de leyendas de la Alhambra",
     "imagen": "https://i.imgur.com/q7WAIXz.jpg",
     "nombre_recorrido": "WASHINGTON IRVING",
@@ -12,7 +12,7 @@
   },
   {
     "id": "2",
-    "nombre": "Leyendas Alhambra origen popular",
+    "nombre": "Leyendas Alhambra Origen Popular",
     "descripcion": "Conjunto de leyendas de la Alhambra",
     "imagen": "https://i.imgur.com/dXP2uLL.jpg",
     "nombre_recorrido": "POPULARES ALHAMBRA",
@@ -23,7 +23,7 @@
   },
   {
     "id": "3",
-    "nombre": "Leyendas amorosas Granada",
+    "nombre": "Leyendas Amorosas Granada",
     "descripcion": "Conjunto de historias/mitos/leyendas relacionadas con el amor en Granada",
     "imagen": "https://i.imgur.com/03M3bOW.jpg",
     "nombre_recorrido": "LEYENDASAMOROSAS",
