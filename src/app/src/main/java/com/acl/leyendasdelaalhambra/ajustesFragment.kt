@@ -1,5 +1,6 @@
 package com.acl.leyendasdelaalhambra
 
+import android.content.Context
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Bundle
@@ -47,14 +48,12 @@ class ajustesFragment : Fragment() {
     private fun changeLocale(id:String){
         var locale = Locale(id)
         val configuracion = Configuration()
-        configuracion.setLocale(Locale(id))
-
-        Locale.setDefault(locale)
-        context?.createConfigurationContext(configuracion)
-        getActivity()?.recreate()
-
         val resources: Resources = requireContext().resources
-        resources.updateConfiguration(configuracion, resources.getDisplayMetrics());
+
+        configuracion.setLocale(Locale(id))
+        Locale.setDefault(locale)
+        resources.updateConfiguration(configuracion, resources.getDisplayMetrics())
+        getActivity()?.recreate()
     }
 
     private fun checkCurrentLanguage(){
