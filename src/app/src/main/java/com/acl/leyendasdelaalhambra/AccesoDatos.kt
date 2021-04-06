@@ -1,6 +1,7 @@
 package com.acl.leyendasdelaalhambra
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.widget.Toast
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -21,8 +22,12 @@ class AccesoDatos {
         //Extraemos en string el Json
         val leyendas_texto:String
 
+
+        var sharedPreferences: SharedPreferences = context!!.applicationContext.getSharedPreferences("ajustes",0)
+        var lang = sharedPreferences.getString("lang", Locale.getDefault().getLanguage())
+
         var inputStream:InputStream = context?.assets!!.open("leyends.json")
-        if(Locale.getDefault().getLanguage() == "es"){
+        if(lang == "es"){
             inputStream = context?.assets!!.open("leyendas.json")
         }
 

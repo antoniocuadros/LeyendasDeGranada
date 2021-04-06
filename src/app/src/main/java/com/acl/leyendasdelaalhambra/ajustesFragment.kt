@@ -1,6 +1,7 @@
 package com.acl.leyendasdelaalhambra
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Bundle
@@ -35,16 +36,27 @@ class ajustesFragment : Fragment() {
 
         botoningles.setOnClickListener{
             changeLocale("en")
+            //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            guardaPersistente("lang", "en")
         }
 
         botonespanol.setOnClickListener{
+
             changeLocale("es")
+            //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            guardaPersistente("lang", "es")
         }
 
 
         return view
     }
 
+    private fun guardaPersistente(atributo:String, valor:String){
+        var sharedPreferences:SharedPreferences = requireContext().getSharedPreferences("ajustes", 0)
+        val sharedPreferencesEditor: SharedPreferences.Editor = sharedPreferences.edit()
+        sharedPreferencesEditor.putString(atributo, valor)
+        sharedPreferencesEditor.commit()
+    }
     private fun changeLocale(id:String){
         var locale = Locale(id)
         val configuracion = Configuration()
