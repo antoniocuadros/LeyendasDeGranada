@@ -66,7 +66,6 @@ class PantallaInicio : Fragment() {
         configuracion.setLocale(Locale(id))
         Locale.setDefault(locale)
         resources.updateConfiguration(configuracion, resources.getDisplayMetrics())
-        Toast.makeText(context, "lang", Toast.LENGTH_SHORT).show()
     }
 
 }
