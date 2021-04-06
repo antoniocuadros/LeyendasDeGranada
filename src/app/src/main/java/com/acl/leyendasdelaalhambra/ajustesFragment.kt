@@ -35,16 +35,20 @@ class ajustesFragment : Fragment() {
         checkCurrentLanguage()
 
         botoningles.setOnClickListener{
-            changeLocale("en")
-            //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            guardaPersistente("lang", "en")
+            if(obtenerLenguajeActual() != "en"){
+                changeLocale("en")
+                //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                guardaPersistente("lang", "en")
+            }
+
         }
 
         botonespanol.setOnClickListener{
-
-            changeLocale("es")
-            //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            guardaPersistente("lang", "es")
+            if(obtenerLenguajeActual() != "es") {
+                changeLocale("es")
+                //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                guardaPersistente("lang", "es")
+            }
         }
 
 
@@ -56,6 +60,12 @@ class ajustesFragment : Fragment() {
         val sharedPreferencesEditor: SharedPreferences.Editor = sharedPreferences.edit()
         sharedPreferencesEditor.putString(atributo, valor)
         sharedPreferencesEditor.commit()
+    }
+
+    private fun obtenerLenguajeActual():String{
+        var sharedPreferences: SharedPreferences = requireContext().applicationContext.getSharedPreferences("ajustes",0)
+        var lang = sharedPreferences.getString("lang", Locale.getDefault().getLanguage())
+        return lang.toString()
     }
     private fun changeLocale(id:String){
         var locale = Locale(id)
