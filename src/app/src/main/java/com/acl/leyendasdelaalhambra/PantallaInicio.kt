@@ -21,7 +21,7 @@ class PantallaInicio : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var sharedPreferences: SharedPreferences = requireContext().applicationContext.getSharedPreferences("ajustes",0)
-        var lang = sharedPreferences.getString("lang", "en")
+        var lang = sharedPreferences.getString("lang", Locale.getDefault().getLanguage())
 
 
         changeLocale(lang.toString())
