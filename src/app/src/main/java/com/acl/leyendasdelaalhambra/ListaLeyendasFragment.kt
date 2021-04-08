@@ -67,7 +67,7 @@ class ListaLeyendasFragment : Fragment() {
         val leyendas = acceso_datos.obtenerLeyendas()
 
         // Paso 4)
-        adapter = LeyendaAdapter(leyendas)
+        adapter = LeyendaAdapter(leyendas, requireContext())
         cuadricula_leyendas.adapter = adapter
 
         //Paso 5)

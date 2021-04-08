@@ -1,5 +1,6 @@
 package com.acl.leyendasdelaalhambra
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,8 +16,8 @@ import com.bumptech.glide.Glide
     en este caso las URLs de las imágenes.
     .
  */
-class SliderImagenesAdapter(var imagen:MutableList<String>):RecyclerView.Adapter<SliderImagenesAdapter.Pager2ViewHolder>() {
-
+class SliderImagenesAdapter(var imagen:MutableList<String>,context: Context):RecyclerView.Adapter<SliderImagenesAdapter.Pager2ViewHolder>() {
+    var context = context
     /*
     En este punto es necesario definir una inner class que define el contenido de las vistas que queremos
     acceder, en este caso únicamente una, que es la propia imagen en sí.
@@ -45,7 +46,8 @@ class SliderImagenesAdapter(var imagen:MutableList<String>):RecyclerView.Adapter
     En este caso solo es necesario añadir la imagen cargándola directamente con Glide.
      */
     override fun onBindViewHolder(holder: SliderImagenesAdapter.Pager2ViewHolder, position: Int) {
-        Glide.with(holder.itemView).load(imagen[position]).into(holder.imagen);
+        var id_imagen = context.resources.getIdentifier(imagen[position], "drawable", "com.acl.leyendasdelaalhambra")
+        holder.imagen.setImageResource(id_imagen)
     }
 
 }

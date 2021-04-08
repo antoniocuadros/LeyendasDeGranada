@@ -1,5 +1,6 @@
 package com.acl.leyendasdelaalhambra
 
+import android.content.Context
 import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
@@ -20,8 +21,8 @@ de rellenar la vista de la lista de leyendas adaptando cada leyenda a un item se
 layout "leyenda_item" en forma de carta e irá añadiendo a la vista dichas cartas a la vista
 que contiene la lista de leyendas. Por ello recibe en el constructor la lista de leyendas.
  */
-class LeyendaAdapter(var listaLeyendas:MutableList<Leyenda>): BaseAdapter(){
-
+class LeyendaAdapter(var listaLeyendas:MutableList<Leyenda>, context: Context): BaseAdapter(){
+    var context = context
     //Se va a llamar cuando se vaya a mostrar la lista de items
     //Construye cada elemento
     /*
@@ -51,7 +52,8 @@ class LeyendaAdapter(var listaLeyendas:MutableList<Leyenda>): BaseAdapter(){
 
         // Paso 4)
         var imagen = leyenda.imagen
-        Glide.with(vista).load(leyenda.imagen).into(imagen_leyenda);
+        var id_imagen = context.resources.getIdentifier(imagen, "drawable", "com.acl.leyendasdelaalhambra")
+        imagen_leyenda.setImageResource(id_imagen)
         nombre_leyenda.text = leyenda.nombre
         var text_desc = leyenda.descripcion.take(50)+"..."
         descripcion_pequena.text = text_desc

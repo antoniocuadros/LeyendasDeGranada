@@ -149,7 +149,8 @@ class LeyendaDetallesFragment : Fragment() {
         derechos.text = leyenda.fuente.take(50)
 
         // Paso 4)
-        //Glide.with(this).load(leyenda.imagen).into(imagen_leyenda);
+        var id_imagen = context?.resources?.getIdentifier(leyenda.imagen, "drawable", "com.acl.leyendasdelaalhambra")
+        imagen_leyenda.setImageResource(id_imagen!!)
     }
 
     /*
@@ -187,7 +188,7 @@ class LeyendaDetallesFragment : Fragment() {
             viewpager_imagenes.visibility = View.GONE
             indicador_pagina_imagen_slider.visibility = View.GONE
         }
-        viewpager_imagenes.adapter = SliderImagenesAdapter(imagen_list)
+        viewpager_imagenes.adapter = SliderImagenesAdapter(imagen_list, requireContext())
         viewpager_imagenes.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         indicador_pagina_imagen_slider.setViewPager(viewpager_imagenes)
