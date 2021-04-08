@@ -28,8 +28,8 @@ class AccesoDatos {
         -> recorridos: Mutable list de objetos Recorrido que contendrá la lista de recorridos leídos
                           de un fichero JSON.
      */
-    lateinit var listaLeyendas:MutableList<Leyenda>;
-    lateinit var recorridos:MutableList<Recorrido>
+    var listaLeyendas:MutableList<Leyenda>;
+    var recorridos:MutableList<Recorrido>
 
     /*
     El constructor de esta clase se encarga de inicializar los atributos listaLeyendas y recorridos
@@ -67,9 +67,9 @@ class AccesoDatos {
 
 
         // Paso 2)
-        var inputStream:InputStream = context?.assets!!.open("leyends.json")
+        var inputStream:InputStream = context.assets!!.open("leyends.json")
         if(lang == "es"){
-            inputStream = context?.assets!!.open("leyendas.json")
+            inputStream = context.assets!!.open("leyendas.json")
         }
 
         // Paso 3)
@@ -111,7 +111,7 @@ class AccesoDatos {
         // Paso 1)
         var inputStream:InputStream = context?.assets!!.open("tours.json")
         if(Locale.getDefault().getLanguage() == "es"){
-            inputStream = context?.assets!!.open("recorridos.json")
+            inputStream = context.assets!!.open("recorridos.json")
         }
 
         // Paso 2)

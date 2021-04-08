@@ -17,7 +17,7 @@ class ListaLeyendasFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val callback = requireActivity().onBackPressedDispatcher.addCallback(this){
+        requireActivity().onBackPressedDispatcher.addCallback(this){
             System.exit(0)
         }
 
@@ -41,7 +41,7 @@ class ListaLeyendasFragment : Fragment() {
 
         cuadricula_leyendas.adapter = adapter
 
-        cuadricula_leyendas.setOnItemClickListener{cuadricula_leyendas, view, i,l ->
+        cuadricula_leyendas.setOnItemClickListener{cuadricula_leyendas, _, i,_ ->
             val leyenda:Leyenda
             leyenda = cuadricula_leyendas.getItemAtPosition(i) as Leyenda
             (activity as MainActivity).onLeyendaSelected(leyenda)

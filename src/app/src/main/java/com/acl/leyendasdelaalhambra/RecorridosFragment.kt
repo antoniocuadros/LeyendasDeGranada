@@ -16,7 +16,7 @@ class RecorridosFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val callback = requireActivity().onBackPressedDispatcher.addCallback(this){
+        requireActivity().onBackPressedDispatcher.addCallback(this){
             (activity as MainActivity).de_recorridos_a_leyendas()
         }
 
@@ -41,7 +41,7 @@ class RecorridosFragment : Fragment() {
 
         cuadricula.adapter = adapter
 
-        cuadricula.setOnItemClickListener{cuadricula, view, i,l ->
+        cuadricula.setOnItemClickListener{cuadricula, _, i,_ ->
             val recorrido:Recorrido
             recorrido = cuadricula.getItemAtPosition(i) as Recorrido
             (activity as MainActivity).onRecorridoSelected(recorrido)
