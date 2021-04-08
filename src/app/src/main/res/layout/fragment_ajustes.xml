@@ -72,7 +72,8 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:id="@+id/botonespanol"
-                                android:layout_marginRight="-20dp"
+                                android:layout_marginRight="-60dp"
+                                android:paddingRight="60dp"
                                 />
 
                             <ImageView
@@ -95,7 +96,8 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:id="@+id/botoningles"
-                                android:layout_marginRight="-20dp"
+                                android:layout_marginRight="-60dp"
+                                android:paddingRight="60dp"
                                 />
                             <ImageView
                                 android:layout_width="60dp"
