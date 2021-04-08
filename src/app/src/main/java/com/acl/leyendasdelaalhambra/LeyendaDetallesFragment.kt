@@ -24,11 +24,21 @@ class LeyendaDetallesFragment : Fragment() {
     private var reproductor: MediaPlayer? = null
     private var boton_sonido:ImageButton? = boton_play
     private var boton_sonido_stop:ImageButton? = boton_stop
+    lateinit var nombreText:TextView
+    lateinit var descripcionText:TextView
+    lateinit var imagen_leyenda:ImageView
+    lateinit var derechos:TextView
+    lateinit var boton_localizacion:Button
+    lateinit var boton_sitio:Button
+    lateinit var viewpager_imagenes:ViewPager2
+    lateinit var indicador_pagina_imagen_slider:CircleIndicator3
+    lateinit var menu:View
+    lateinit var leyenda:Leyenda
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val callback = requireActivity().onBackPressedDispatcher.addCallback(this){
+        requireActivity().onBackPressedDispatcher.addCallback(this){
             (activity as MainActivity).de_detalles_a_leyendas()
         }
 
@@ -41,19 +51,34 @@ class LeyendaDetallesFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_leyenda_detalles, container, false)
 
-        //Mostramos el menu inferior
-        var menu = requireActivity().findViewById<View>(R.id.menu_inferior)
+        inicializa_vistas(view)
+
+        leyenda = argumentos_recibidos_leyendas.leyenda
+
+
         menu.visibility = View.VISIBLE
 
-        val leyenda = argumentos_recibidos_leyendas.leyenda
+        estableceDatosLeyenda()
 
-        val nombreText = view.findViewById<TextView>(R.id.nombre_leyenda_detalles)
-        val descripcionText = view.findViewById<TextView>(R.id.descripcion_leyenda_detalles)
-        val imagen_leyenda = view.findViewById<ImageView>(R.id.imagen_leyenda_detalles)
-        val derechos = view.findViewById<TextView>(R.id.derechos_leyenda)
-        boton_sonido = view.findViewById<ImageButton>(R.id.boton_play)
-        boton_sonido_stop = view.findViewById<ImageButton>(R.id.boton_stop)
+        return view
+    }
 
+    private fun estableceDatosLeyenda(){
+
+        establece_datos_principales()
+
+        estableceSliderImagenes()
+
+        establece_boton_localización()
+
+        establece_boton_sitio()
+
+        establece_texto_derechos()
+
+        establece_botones_sonido()
+    }
+
+    private fun establece_datos_principales(){
         nombreText.text = leyenda.nombre
         descripcionText.text = leyenda.descripcion
         derechos.text = leyenda.fuente.take(50)
@@ -61,33 +86,66 @@ class LeyendaDetallesFragment : Fragment() {
         derechos.setMovementMethod(LinkMovementMethod.getInstance())
 
         Glide.with(this).load(leyenda.imagen).into(imagen_leyenda);
+    }
 
-        val boton_localizacion = view.findViewById<Button>(R.id.boton_localizacion)
-        val boton_sitio= view.findViewById<Button>(R.id.boton_sitio_web)
+    private fun inicializa_vistas(view:View){
+        nombreText = view.findViewById<TextView>(R.id.nombre_leyenda_detalles)
+        descripcionText = view.findViewById<TextView>(R.id.descripcion_leyenda_detalles)
+        imagen_leyenda = view.findViewById<ImageView>(R.id.imagen_leyenda_detalles)
+        derechos = view.findViewById<TextView>(R.id.derechos_leyenda)
+        boton_sonido = view.findViewById<ImageButton>(R.id.boton_play)
+        boton_sonido_stop = view.findViewById<ImageButton>(R.id.boton_stop)
+        viewpager_imagenes = view.findViewById<ViewPager2>(R.id.viewpager_imagenes)
+        indicador_pagina_imagen_slider = view.findViewById<CircleIndicator3>(R.id.indicador_slider)
+        boton_localizacion = view.findViewById<Button>(R.id.boton_localizacion)
+        boton_sitio= view.findViewById<Button>(R.id.boton_sitio_web)
+        menu = requireActivity().findViewById<View>(R.id.menu_inferior)
+    }
+    private fun estableceSliderImagenes(){
+        //Slider de imágenes
+        var imagen_list = leyenda.imagenes_adicionales
 
+
+        //Si no hay imágenes no dejamos el hueco vacío, lo eliminamos
+        if(imagen_list.size == 0){
+            viewpager_imagenes.visibility = View.GONE
+            indicador_pagina_imagen_slider.visibility = View.GONE
+        }
+        viewpager_imagenes.adapter = SliderImagenesAdapter(imagen_list)
+        viewpager_imagenes.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        indicador_pagina_imagen_slider.setViewPager(viewpager_imagenes)
+    }
+
+    private fun establece_boton_localización(){
         //Botón de la ubicación
+
         boton_localizacion.setOnClickListener {
             (activity as MainActivity).onBotonLocalizacionSelected(leyenda)
         }
+    }
 
-        //Botón del sitio
+    private fun establece_boton_sitio(){
         if(leyenda.sitio_web == ""){
             boton_sitio.visibility =  View.GONE
         }
+
         boton_sitio.setOnClickListener {
             val i = Intent(Intent.ACTION_VIEW)
             i.setData(Uri.parse(leyenda.sitio_web))
             getActivity()?.startActivity(i)
         }
+    }
 
-        //Texto derechos
+    private fun establece_texto_derechos(){
         derechos.setOnClickListener {
             val i = Intent(Intent.ACTION_VIEW)
             i.setData(Uri.parse(leyenda.fuente))
             getActivity()?.startActivity(i)
         }
+    }
 
-        //Boton reproducir sonido
+    private fun establece_botones_sonido(){
         boton_sonido?.setOnClickListener{
 
             if(reproductor == null){
@@ -124,29 +182,6 @@ class LeyendaDetallesFragment : Fragment() {
             boton_sonido_stop?.visibility = View.GONE
             boton_sonido?.setImageResource(R.drawable.play)
         }
-
-
-        //Slider de imágenes
-        var imagen_list = leyenda.imagenes_adicionales
-
-
-
-        var viewpager_imagenes = view.findViewById<ViewPager2>(R.id.viewpager_imagenes)
-        var indicador_pagina_imagen_slider = view.findViewById<CircleIndicator3>(R.id.indicador_slider)
-
-        //Si no hay imágenes no dejamos el hueco vacío, lo eliminamos
-        if(imagen_list.size == 0){
-            viewpager_imagenes.visibility = View.GONE
-            indicador_pagina_imagen_slider.visibility = View.GONE
-        }
-        viewpager_imagenes.adapter = SliderImagenesAdapter(imagen_list)
-        viewpager_imagenes.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-
-
-        indicador_pagina_imagen_slider.setViewPager(viewpager_imagenes)
-
-
-        return view
     }
 
     override fun onPause() {
