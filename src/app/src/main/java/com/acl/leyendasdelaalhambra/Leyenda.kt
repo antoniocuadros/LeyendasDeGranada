@@ -7,7 +7,7 @@ import kotlinx.android.parcel.Parcelize
 
 /*
 Esta clase de datos representa una leyenda con los siguientes atributos:
-    -> id: identificador numérico de tipo Int que identifica de forma única a cada leyenda.
+    -> id: identificador numérico de tipo Long que identifica de forma única a cada leyenda.
     -> nombre: nombre de la leyenda de tipo String.
     -> descripcion: descripción de la leyenda almacenada como String.
     -> imagen: url de la imagen que será cargada haciendo uso de Glide, de tipo string.
