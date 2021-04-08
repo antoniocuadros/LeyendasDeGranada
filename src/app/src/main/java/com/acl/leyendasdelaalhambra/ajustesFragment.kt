@@ -13,8 +13,17 @@ import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import java.util.*
 
-
+/*
+    Este fragmento dota de funcionalidad a la vista de los ajustes donde podemos gestionar
+    el idioma, pudiendo elegir entre español o inglés.
+ */
 class ajustesFragment : Fragment() {
+    /*
+    ATRIBUTOS DE LA CLASE ajustesFragment:
+        -> radiobuttongroup:
+        -> botoningles
+        -> botonespanol
+     */
     lateinit var radiobuttongroup:RadioGroup
     lateinit var botoningles:RadioButton
     lateinit var botonespanol:RadioButton
