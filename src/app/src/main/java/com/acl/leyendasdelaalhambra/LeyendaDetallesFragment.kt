@@ -149,7 +149,7 @@ class LeyendaDetallesFragment : Fragment() {
         derechos.text = leyenda.fuente.take(50)
 
         // Paso 4)
-        Glide.with(this).load(leyenda.imagen).into(imagen_leyenda);
+        //Glide.with(this).load(leyenda.imagen).into(imagen_leyenda);
     }
 
     /*

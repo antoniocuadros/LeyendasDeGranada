@@ -27,7 +27,6 @@ app:cardElevation="5dp"
             android:layout_width="match_parent"
             android:scaleType="centerCrop"
             android:layout_height="120dp"
-            android:src="@drawable/imagen_prueba"
             />
     </androidx.cardview.widget.CardView>
 

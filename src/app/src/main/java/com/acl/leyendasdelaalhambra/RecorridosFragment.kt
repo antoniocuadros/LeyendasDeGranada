@@ -66,7 +66,7 @@ class RecorridosFragment : Fragment() {
         val recorridos = acceso_datos.obtenerRecorridos()
 
         // Paso 4
-        adapter = RecorridoAdapter(recorridos)
+        adapter = RecorridoAdapter(recorridos, requireContext())
         cuadricula.adapter = adapter
 
         // Paso 5

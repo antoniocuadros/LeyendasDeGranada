@@ -1,5 +1,6 @@
 package com.acl.leyendasdelaalhambra
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,7 +50,7 @@ class LeyendaAdapter(var listaLeyendas:MutableList<Leyenda>): BaseAdapter(){
         val descripcion_pequena = vista.findViewById<TextView>(R.id.pequena_descripcion)
 
         // Paso 4)
-        imagen_leyenda.setImageResource(R.drawable.leones)
+        var imagen = leyenda.imagen
         Glide.with(vista).load(leyenda.imagen).into(imagen_leyenda);
         nombre_leyenda.text = leyenda.nombre
         var text_desc = leyenda.descripcion.take(50)+"..."

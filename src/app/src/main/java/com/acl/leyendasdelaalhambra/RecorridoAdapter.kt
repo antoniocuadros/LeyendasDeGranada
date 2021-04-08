@@ -1,16 +1,14 @@
 package com.acl.leyendasdelaalhambra
 
 import android.content.Context
-import android.media.Image
-import android.view.LayoutInflater
+import android.content.res.Resources
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.recorrido_item.view.*
 import java.util.*
+import kotlin.system.exitProcess
 
 /*
 Esta clase representa el adaptador de la lista de recorridos. Este adaptador se encargará
@@ -18,8 +16,8 @@ de rellenar la vista de la lista de recorridos adaptando cada recorrido a un ite
 layout "recorrido_item" en forma de carta e irá añadiendo a la vista dichas cartas a la vista
 que contiene la lista de recorridos. Por ello recibe en el constructor la lista de recorridos.
  */
-class RecorridoAdapter(var listaRecorridos:MutableList<Recorrido>): BaseAdapter(){
-
+class RecorridoAdapter(var listaRecorridos:MutableList<Recorrido>, context: Context): BaseAdapter(){
+    var context = context
     /*
     Este método se encarga de, para cada recorrido, rellenar la vista del item descrita en el layout
     "recorrido_item". Para ello se siguen los siguientes pasos:
@@ -45,8 +43,10 @@ class RecorridoAdapter(var listaRecorridos:MutableList<Recorrido>): BaseAdapter(
         val texto_paradas = vista.findViewById<TextView>(R.id.texto_paradas)
 
         // Paso 4)
-        imagen_recorrido.setImageResource(R.drawable.leones)
-        Glide.with(vista).load(recorrido.imagen).into(imagen_recorrido);
+        var id_imagen = context.resources.getIdentifier(recorrido.imagen, "drawable", "com.acl.leyendasdelaalhambra")
+
+        imagen_recorrido.setImageResource(id_imagen)
+
         texto_recorrido.text = recorrido.nombre
         if(Locale.getDefault().getLanguage() == "es") {
             texto_paradas.text = "Paradas: " + recorrido.leyendas.size
