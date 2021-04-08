@@ -1,6 +1,7 @@
 package com.acl.leyendasdelaalhambra
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
@@ -42,7 +43,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val callback = requireActivity().onBackPressedDispatcher.addCallback(this){
+        requireActivity().onBackPressedDispatcher.addCallback(this){
             (activity as MainActivity).de_mapa_a_leyendas()
         }
 
@@ -182,7 +183,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
         centraMapa(LatLng(recorrido.Latitud , recorrido.Longitud), recorrido.zoom)
 
         //creamos la polilinea
-        var polyline2 = mapa.addPolyline(PolylineOptions()
+        mapa.addPolyline(PolylineOptions()
             .clickable(true).color(R.color.Rojo)
             .addAll(
                 coordenadas
@@ -246,6 +247,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     //////////////////////////////////////////////////////
     //Ahora tenemos que capturar la respuesta cuando el usuario acepte los permisos
     //////////////////////////////////////////////////////
+    @SuppressLint("MissingPermission")
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         if(requestCode == 100){
             if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){  //Ha aceptado el permiso
