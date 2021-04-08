@@ -21,8 +21,8 @@ class ajustesFragment : Fragment() {
     /*
     ATRIBUTOS DE LA CLASE ajustesFragment:
         -> radiobuttongroup:
-        -> botoningles
-        -> botonespanol
+        -> botoningles:
+        -> botonespanol:
      */
     lateinit var radiobuttongroup:RadioGroup
     lateinit var botoningles:RadioButton
@@ -49,6 +49,7 @@ class ajustesFragment : Fragment() {
                 //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 guardaPersistente("lang", "en")
             }
+            botonespanol.isChecked = false
 
         }
 
@@ -58,6 +59,7 @@ class ajustesFragment : Fragment() {
                 //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 guardaPersistente("lang", "es")
             }
+            botoningles.isChecked = false
         }
 
 

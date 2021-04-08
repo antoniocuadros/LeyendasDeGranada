@@ -10,77 +10,106 @@
     android:orientation="vertical"
     >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
+            android:layout_height="wrap_content">
 
-            android:orientation="vertical">
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mapa_carta"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/mapa_carta"
+                android:layout_height="200dp"
+                android:outlineAmbientShadowColor="@color/BackgroudGreen"
+                android:layout_margin="10dp"
+                android:elevation="100dp"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:gravity = "center"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:outlineAmbientShadowColor="@color/BackgroudGreen"
-                    android:layout_margin="10dp"
-                    android:elevation="100dp"
-                    app:cardCornerRadius="20dp">
-                    <LinearLayout
-                        android:gravity = "center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:text="@string/idioma"
+                        android:gravity="center"
+
+                        android:textSize="30dp"
+
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/black"
+                        />
+                    <RadioGroup
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:id="@+id/radiogroup"
                         >
 
-                        <TextView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/idioma"
-                            android:gravity="center"
-
-                            android:textSize="30dp"
-
-                            android:textStyle="bold"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@color/black"
-                            />
-                        <RadioGroup
-                            android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:gravity="center"
-                            android:id="@+id/radiogroup"
+                            android:layout_marginRight="20dp"
                             >
 
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/espanol"
                                 android:textColor="@color/black"
                                 android:id="@+id/botonespanol"
+                                android:layout_marginRight="-20dp"
                                 />
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/bandera_espana"
+                                android:scaleType="centerCrop"
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            >
                             <RadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/ingles"
                                 android:textColor="@color/black"
                                 android:id="@+id/botoningles"
-
+                                android:layout_marginRight="-20dp"
                                 />
-                        </RadioGroup>
-                    </LinearLayout>
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/bandera_inglaterra"
+                                android:scaleType="centerCrop"
+                                />
+                        </LinearLayout>
+                    </RadioGroup>
+                </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
+    </LinearLayout>
+
 </LinearLayout>
-
-
