@@ -296,5 +296,4 @@ class LeyendaDetallesFragment : Fragment() {
         reproductor = null
         boton_sonido?.setImageResource(R.drawable.play)
     }
-
 }
