@@ -206,7 +206,17 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     //////////////////////////////////////////////////////
     private fun anadeMarcador(leyenda:Leyenda){
         val coordenadas = LatLng(leyenda.Lat,leyenda.Long);
-        val marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)).snippet(leyenda.ubicacion))
+        //En función del recorrido al que pertenezca se le da un color u otro
+        var marcador:Marker = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)).snippet(leyenda.ubicacion))
+       
+        when(leyenda.recorrido){
+            "WASHINGTON IRVING" -> marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)).snippet(leyenda.ubicacion))
+            "POPULARES ALHAMBRA" -> marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.markerb)).snippet(leyenda.ubicacion))
+            "LEYENDASAMOROSAS" -> marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.markerg)).snippet(leyenda.ubicacion))
+            "REALEJO" -> marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.markerm)).snippet(leyenda.ubicacion))
+        }
+
+        //marcador = mapa.addMarker(MarkerOptions().position(coordenadas).title(leyenda.nombre).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker)).snippet(leyenda.ubicacion))
         marcador.tag = leyenda
     }
 
