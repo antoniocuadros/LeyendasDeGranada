@@ -51,7 +51,7 @@ class PantallaInicio : Fragment() {
     fragmento.
     Adicionalmente se llama al método inicializa_vistas que vincula cada atributo de la clase
     con su vista.
-    Por último se definen los listeners de los botones que nos redigirán a los distintos fragmentos
+    Por último se definen los listeners de los botones que nos redirigirán a los distintos fragmentos
     de nuestra aplicación:
         -> boton_mapa: al hacer click nos redirige al mapa.
         -> boton_recorridos: al hacer click nos redirige a la lista de recorridos.

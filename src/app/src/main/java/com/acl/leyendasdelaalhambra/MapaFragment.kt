@@ -31,7 +31,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     // -> mapa: Objeto de tipo google map que contiene el mapa
     // -> argumentos_detalles: argumentos que recibimos en el
     //                         proceso de navegación entre fragments
-    // -> botón todas: botón flotante para mostrar todas las leyendas
+    // -> botón_todas: botón flotante para mostrar todas las leyendas
     //////////////////////////////////////////////////////
     private lateinit var mapa: GoogleMap;
     private val argumentos_detalles:MapaFragmentArgs by navArgs()
