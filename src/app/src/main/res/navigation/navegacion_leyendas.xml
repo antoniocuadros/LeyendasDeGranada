@@ -85,5 +85,9 @@
         android:id="@+id/icono_ajustes"
         android:name="com.acl.leyendasdelaalhambra.ajustesFragment"
         android:label="fragment_ajustes"
-        tools:layout="@layout/fragment_ajustes" />
+        tools:layout="@layout/fragment_ajustes" >
+        <action
+            android:id="@+id/action_icono_ajustes_to_icono_lista_leyendas"
+            app:destination="@id/icono_lista_leyendas" />
+    </fragment>
 </navigation>

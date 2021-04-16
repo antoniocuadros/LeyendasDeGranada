@@ -125,4 +125,8 @@ class MainActivity : AppCompatActivity() {
     fun de_detalles_a_leyendas(){
         findNavController(R.id.fragment2).navigate(LeyendaDetallesFragmentDirections.actionLeyendaDetallesFragmentToIconoListaLeyendas())
     }
+
+    fun de_ajustes_a_leyendas(){
+        findNavController(R.id.fragment2).navigate(ajustesFragmentDirections.actionIconoAjustesToIconoListaLeyendas())
+    }
 }
