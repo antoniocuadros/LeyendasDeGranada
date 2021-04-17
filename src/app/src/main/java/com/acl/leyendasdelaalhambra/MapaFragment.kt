@@ -256,7 +256,7 @@ class MapaFragment : Fragment(), GoogleMap.OnInfoWindowClickListener, OnMapReady
     //////////////////////////////////////////////////////
     @SuppressLint("MissingPermission")
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        if(requestCode == 100){
+        if(requestCode == 200){
             if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){  //Ha aceptado el permiso
                 mapa.isMyLocationEnabled = true
             }else{//se ha rechazado el permiso de ubicación
